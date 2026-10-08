@@ -1,0 +1,48 @@
+name: Publish English lesson
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install recording generator
+        run: python -m pip install -r requirements-audio.txt
+      - name: Generate and verify all fixed recordings
+        run: python scripts/generate_audio.py
+      - name: Check JavaScript
+        run: |
+          node --check dist/app.js
+          node --check dist/voice-player.js
+          node --check dist/assets/audio-catalog.js
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload lesson
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v5
