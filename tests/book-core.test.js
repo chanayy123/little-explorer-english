@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const root=path.join(__dirname,'..'),source=fs.readFileSync(path.join(root,'dist/book-core.js'),'utf8'),data=JSON.parse(fs.readFileSync(path.join(root,'dist/assets/lessons.json'),'utf8'));
+const memory=new Map(),sandbox={window:{},Intl,Date,URL,localStorage:{getItem:key=>memory.get(key)||null,setItem:(key,value)=>memory.set(key,value)}};
+vm.runInNewContext(source,sandbox);const B=sandbox.window.LessonBook;
+assert.equal(B.today(new Date('2026-10-08T15:59:59Z')),'2026-10-08');
+assert.equal(B.today(new Date('2026-10-08T16:00:00Z')),'2026-10-09');
+const friday=data.lessons.find(c=>c.date==='2026-10-09');assert.equal(B.available(friday,'2026-10-08'),false);assert.equal(B.available(friday,'2026-10-09'),true);
+assert.equal(B.available(null,'2026-10-09'),false);assert.equal(B.monday('2026-10-11'),'2026-10-05');assert.equal(B.addDays('2026-12-31',1),'2027-01-01');
+const block=data.lessons[0];memory.set('little-explorer-block-v1',JSON.stringify({screen:'lesson',stage:2,completed:[0,1],sound:false,recordingVoice:'aria'}));assert.equal(B.progress(block).stars,2);assert.equal(B.preferences().recordingVoice,'aria');assert.equal(B.preferences().sound,false);assert.equal('stage' in B.preferences(),false);
+const tree=data.lessons.find(c=>c.word==='tree');assert.equal(B.progress(tree).stars,0);B.write(B.storageKey(tree),{screen:'complete',completed:[0,1,2,3,4,5]});assert.equal(B.progress(tree).done,true);assert.equal(B.progress(block).stars,2);
+B.savePreferences({sound:true,recordingVoice:'jenny',speechRate:.85});assert.equal(B.preferences().speechRate,.85);assert.equal(B.progress(block).stars,2);
+memory.set(B.storageKey(tree),'bad JSON');assert.equal(B.progress(tree).stars,0);
+const unavailable={window:{},Intl,Date,URL,localStorage:{getItem(){throw new Error('blocked');},setItem(){throw new Error('blocked');}}};vm.runInNewContext(source,unavailable);assert.equal(unavailable.window.LessonBook.preferences().sound,true);assert.doesNotThrow(()=>unavailable.window.LessonBook.savePreferences({}));
+console.log('PASS: Shanghai midnight, release gating, legacy progress, isolated courses, shared voices and unavailable storage.');

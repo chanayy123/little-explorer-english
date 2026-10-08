@@ -1,0 +1,23 @@
+(() => {
+  'use strict';
+  const PREFS='little-explorer-voice-v1';
+  const defaults={sound:true,voiceMode:'auto',recordingVoice:'jenny',englishVoice:'auto',chineseVoice:'auto',speechRate:1};
+  const escape=text=>String(text??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const dateKey=(date=new Date())=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).reduce((o,p)=>(o[p.type]=p.value,o),{});
+  const today=(date=new Date())=>{const p=dateKey(date);return `${p.year}-${p.month}-${p.day}`;};
+  const addDays=(key,n)=>{const date=new Date(key+'T12:00:00Z');date.setUTCDate(date.getUTCDate()+n);return date.toISOString().slice(0,10);};
+  const monday=key=>addDays(key,-((new Date(key+'T12:00:00Z').getUTCDay()+6)%7));
+  const available=(lesson,key=today())=>Boolean(lesson&&lesson.date<=key);
+  const read=key=>{try{return JSON.parse(localStorage.getItem(key));}catch{return null;}};
+  const write=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));}catch{}};
+  const storageKey=lesson=>lesson.storageKey||`little-explorer-course-${lesson.id}-v1`;
+  const total=lesson=>lesson.type==='review'?lesson.questions.length+1:6;
+  const progress=lesson=>{const state=read(storageKey(lesson));const stars=Array.isArray(state?.completed)?new Set(state.completed.filter(n=>Number.isInteger(n)&&n>=0&&n<total(lesson))).size:0;return {stars,total:total(lesson),done:stars===total(lesson),started:stars>0||state?.screen==='lesson'};};
+  const preferences=()=>{const raw=read(PREFS)||read('little-explorer-block-v1')||{};return Object.fromEntries(Object.keys(defaults).map(key=>[key,raw[key]??defaults[key]]));};
+  const savePreferences=state=>write(PREFS,Object.fromEntries(Object.keys(defaults).map(key=>[key,state[key]??defaults[key]])));
+  const url=lesson=>'lesson.html?id='+encodeURIComponent(lesson.id);
+  const art=(kind,cls='')=>`<svg class="book-object ${escape(cls)}" viewBox="0 0 200 200" aria-hidden="true"><use href="assets/lesson-art.svg#${escape(kind)}"></use></svg>`;
+  const names={block:'方块',tree:'树',house:'房子',water:'水',seed:'种子'};
+  const load=async()=>{const response=await fetch(new URL('assets/lessons.json',document.baseURI),{cache:'no-cache'});if(!response.ok)throw new Error('课程暂未加载');const data=await response.json();if(!Array.isArray(data.lessons))throw new Error('课程清单无效');for(const c of data.lessons)if(c.word&&c.meaning)names[c.art||c.word]=c.meaning;return {...data,lessons:[...data.lessons].sort((a,b)=>a.date.localeCompare(b.date))};};
+  window.LessonBook={escape,today,addDays,monday,available,read,write,storageKey,total,progress,preferences,savePreferences,url,art,names,load};
+})();

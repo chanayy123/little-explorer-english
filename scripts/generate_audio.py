@@ -19,6 +19,20 @@ CHINESE = [
     "认真写过啦，做得好！", "探险完成！你好，方块小达人。",
     "今天的新朋友，方块。我们一起听一听。",
 ]
+# The course data is the shared source for all future audio generations.
+LIBRARY = json.loads((ROOT / "dist/assets/lessons.json").read_text(encoding="utf-8"))
+CHINESE += ["和妈妈一起说这句话", "和妈妈做完小任务，再写一次单词。", "探险完成，今天学得很认真！"]
+for course in LIBRARY["lessons"]:
+    if course["type"] == "word":
+        word = course["word"]
+        ENGLISH += [word, ". ".join(word.upper()) + ".", *word.upper()]
+        ENGLISH += [phrase["text"] for phrase in course["phrases"]]
+        CHINESE.append(f"今天的新朋友，{course['meaning']}。它的英语名字是")
+    elif course["type"] == "review":
+        ENGLISH += [question["speak"] for question in course["questions"]]
+        CHINESE += [question["prompt"] for question in course["questions"]]
+ENGLISH = list(dict.fromkeys(ENGLISH))
+CHINESE = list(dict.fromkeys(CHINESE))
 PROFILES = {"jenny": ("en-US-JennyNeural", ENGLISH), "aria": ("en-US-AriaNeural", ENGLISH), "xiaoxiao": ("zh-CN-XiaoxiaoNeural", CHINESE)}
 
 
@@ -75,8 +89,11 @@ async def generate():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan", action="store_true", help="Print recording plan without making network calls")
+    parser.add_argument("--list-texts", action="store_true", help="Print all texts for offline coverage checks")
     options = parser.parse_args()
-    if options.plan:
+    if options.list_texts:
+        print(json.dumps({"english": ENGLISH, "chinese": CHINESE}, ensure_ascii=False))
+    elif options.plan:
         print(json.dumps({"recordings": len(jobs()), "voices": {k: v[0] for k, v in PROFILES.items()}}, ensure_ascii=False))
     else:
         asyncio.run(generate())

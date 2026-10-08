@@ -4,18 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f8f7ef">
-  <meta name="description" content="和妈妈一起开启方块探险：用六个小关卡学会 block，听一听、说一说、拼一拼、写一写。">
-  <title>方块探险 · 英语第1课</title>
+  <meta name="description" content="每天一个英语小发现：听、说、拼、写，按周浏览课程，放学后随时学习。">
+  <title>小小探险家 · 英语课程书架</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script src="assets/audio-catalog.js?v=2" defer></script>
-  <script src="voice-player.js?v=2" defer></script>
-  <script src="app.js?v=2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="book.css?v=3">
+  <script src="assets/audio-catalog.js?v=3" defer></script>
+  <script src="voice-player.js?v=3" defer></script>
+  <script src="book-core.js?v=3" defer></script>
+  <script src="book.js?v=3" defer></script>
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="回到首页" data-action="home">
+      <a class="brand" href="index.html" aria-label="回到课程书架">
         <span class="brand-cube" aria-hidden="true">▧</span>
         <span>小小探险家<small>每天一个英语小发现</small></span>
       </a>
@@ -26,7 +28,7 @@
         <button class="icon-button" data-action="parent" aria-label="打开陪学指南"><span aria-hidden="true">☷</span><span>陪学指南</span></button>
       </div>
     </header>
-    <main id="app" tabindex="-1"></main>
+    <main id="app" tabindex="-1"><p class="loading-note">正在打开今天的小探险…</p></main>
     <footer class="site-footer"><span>一个单词，一场小冒险。</span><span>兴趣英语 · 亲子共学</span></footer>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
@@ -34,11 +36,11 @@
   <dialog id="parent-dialog" aria-labelledby="parent-title">
     <div class="dialog-top"><span class="eyebrow">一起学习</span><button class="icon-button" data-action="close-parent" aria-label="关闭陪学指南">✕</button></div>
     <h2 id="parent-title">妈妈只需要<br>做一点点引导。</h2>
-    <p class="dialog-lead">今天只学 <b lang="en">block</b>。建议 8～10 分钟，孩子想重复玩也可以。</p>
+    <p class="dialog-lead">每天建议 8～10 分钟。新课当天开放，漏学的课留在书架里；周五复习，周末自由重玩。</p>
     <div class="guide-list">
       <div><span>01</span><p><b>先听，再开口</b><br>点喇叭听示范，留几秒让孩子跟读。口语关由你确认。</p></div>
-      <div><span>02</span><p><b>鼓励尝试，不催着答</b><br>选错可以再选。不必第一次就会拼写，先建立方块和单词的联系。</p></div>
-      <div><span>03</span><p><b>屏幕学完，生活里用</b><br>找一块积木，让孩子说 “I have a block.”，再在纸上写一次。</p></div>
+      <div><span>02</span><p><b>鼓励尝试，不催着答</b><br>选错可以再选。不必第一次就会拼写，先建立画面和单词的联系。</p></div>
+      <div><span>03</span><p><b>屏幕学完，生活里用</b><br>每课都有一个生活小任务。让孩子试着说一句话，再用手指或纸笔写一次。</p></div>
     </div>
     <div class="audio-help"><b>先选一个喜欢的声音</b><p>点右上角「换声音」，分别试听英语和中文。没有声音时，先检查音量和静音状态，再点一次喇叭；也可以由妈妈示范朗读。</p><button class="button secondary small" data-action="voices">换声音 · 试听</button></div>
     <p class="privacy-note">进度仅保存在这台设备的浏览器里。跟读时由妈妈听，不需要录音。</p>

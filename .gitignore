@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 *.part.mp3
+
+.audio-plan.json
+node_modules/

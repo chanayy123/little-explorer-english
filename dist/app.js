@@ -10,7 +10,7 @@
     { name: '拼一拼', icon: 'Aa', sub: '字母搭建挑战', title: '用字母，搭出 block。', intro: '按顺序点字母，让单词从左到右长出来。' },
     { name: '写一写', icon: '✎', sub: '留下你的笔迹', title: '把新朋友写下来。', intro: '用手指、Apple Pencil，或者纸笔写一次。' }
   ];
-  const fresh = () => ({screen:'home',stage:0,completed:[],wordSeen:false,material:'grass',listenRound:0,listenAwaiting:false,said:false,sentence:0,phrases:[false,false],letters:[],strokes:[],showGuide:true,paper:false,writingDone:false,finishedAt:null,sound:true,voiceMode:"auto",recordingVoice:"jenny",englishVoice:"auto",chineseVoice:"auto",speechRate:1});
+  const fresh = () => ({screen:'home',stage:0,completed:[],wordSeen:false,material:'grass',listenRound:0,listenAwaiting:false,said:false,sentence:0,phrases:[false,false],letters:[],strokes:[],showGuide:true,paper:false,writingDone:false,finishedAt:null,sound:true,voiceMode:"auto",recordingVoice:"jenny",englishVoice:"auto",chineseVoice:"auto",speechRate:1,...(window.LessonBook?.preferences()||{})});
   function readState() {
     try {
       const raw = JSON.parse(localStorage.getItem(STORE));
@@ -33,7 +33,7 @@
   let toastTimer;
   let spellingHint = false;
   const voicePlayer = window.createLessonVoice({ settings: () => state, save, toast });
-  function save() { try {localStorage.setItem(STORE,JSON.stringify(state));} catch {} }
+  function save() { try {localStorage.setItem(STORE,JSON.stringify(state));} catch {} window.LessonBook?.savePreferences(state); }
   function toast(message) {
     const el = document.getElementById('toast');
     el.textContent = message;
@@ -112,7 +112,7 @@
     return `<div class="listen-row">${speaker('再听单词')}${speaker('听字母顺序','listen-letters')}</div><div class="spell-slots ${done?'spell-success':''}" aria-label="已拼出 ${state.letters.join('') || '零个字母'}">${[...WORD].map((_,i)=>`<div class="spell-slot ${i<state.letters.length?'filled':''} ${spellingHint&&i===state.letters.length?'hinted':''}">${state.letters[i]||(spellingHint&&i===state.letters.length?hintChar:'')}</div>`).join('')}</div><div class="letter-bank" aria-label="可选择的字母">${['O','K','B','A','L','C','E'].map(letter=>`<button class="letter-tile ${state.letters.includes(letter)?'used':''}" data-action="letter" data-letter="${letter}" aria-label="字母 ${letter}" ${state.letters.includes(letter)||done?'disabled':''}>${letter}</button>`).join('')}</div><div class="spell-tools"><button data-action="spell-undo" ${state.letters.length?'':'disabled'}>↶ 撤回一个</button><button data-action="spell-hint" ${done?'disabled':''}>给我一个提示</button></div>${feedback(done?'★ B · L · O · C · K，你搭出来啦！':'从第一个字母开始。不会的话，可以听字母顺序。')}${bottom('小发现：结尾的 c 和 k 在这里一起发 /k/，不用念两次。')}`;
   }
   function writingStage() {
-    return `<div class="writing-wrap"><div class="writing-bar"><span class="mini-word" lang="en">block</span><div class="writing-tools"><button class="${state.showGuide?'active':''}" data-action="guide" aria-pressed="${state.showGuide}">${state.showGuide?'隐藏描红':'显示描红'}</button><button data-action="clear-writing">清空重写</button></div></div><div class="canvas-wrap"><canvas id="writing-canvas" tabindex="0" aria-label="block 手写练习区域；也可以选择在纸上写"></canvas></div><label class="paper-option"><input type="checkbox" data-action="paper" ${state.paper?'checked':''}>我在纸上写，不在屏幕上写</label><div class="writing-bottom"><p>先看着写，再试试藏起描红写。</p><button class="button secondary small" data-action="written" ${state.strokes.length||state.paper||state.writingDone?'':'disabled'}>${state.writingDone?'✓ 写过啦':'妈妈确认：写过啦'}</button></div></div>${feedback(state.writingDone?'★ 最后一颗星，属于你的认真尝试！':'')}${bottom('会写 BLOCK 或 block 都可以；慢慢练习，不比较漂亮。')}`;
+    return `<div class="writing-wrap"><div class="writing-bar"><span class="mini-word" lang="en">block</span><div class="writing-tools"><button class="${state.showGuide?'active':''}" data-action="guide" aria-pressed="${state.showGuide}">${state.showGuide?'隐藏描红':'显示描红'}</button><button data-action="clear-writing">清空重写</button></div></div><div class="canvas-wrap"><canvas id="writing-canvas" tabindex="0" aria-label="block 手写练习区域；也可以选择在纸上写"></canvas></div><p class="writing-help">用手指在上面写。笔迹会保存在这台设备上；这一版由妈妈确认，不会自动判定字母。</p><label class="paper-option"><input type="checkbox" data-action="paper" ${state.paper?'checked':''}>我在纸上写，不在屏幕上写</label><div class="writing-bottom"><p>先看着写，再试试藏起描红写。</p><button class="button secondary small" data-action="written" ${state.strokes.length||state.paper||state.writingDone?'':'disabled'}>${state.writingDone?'✓ 写过啦':'妈妈确认：写过啦'}</button></div></div>${feedback(state.writingDone?'★ 最后一颗星，属于你的认真尝试！':'')}${bottom('会写 BLOCK 或 block 都可以；慢慢练习，不比较漂亮。')}`;
   }
   function lesson() {
     const content=[firstStage,findStage,sayStage,sentenceStage,spellingStage,writingStage][state.stage]();

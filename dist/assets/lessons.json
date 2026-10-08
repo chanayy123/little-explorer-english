@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "timeZone": "Asia/Shanghai",
+  "releaseTime": "00:00",
+  "lessons": [
+    {
+      "id": "2026-10-08-block",
+      "date": "2026-10-08",
+      "type": "block",
+      "theme": "方块世界初体验",
+      "title": "第一块英语积木",
+      "word": "block",
+      "meaning": "方块",
+      "art": "block",
+      "minutes": "8～10",
+      "storageKey": "little-explorer-block-v1"
+    },
+    {
+      "id": "2026-10-09-review",
+      "date": "2026-10-09",
+      "type": "review",
+      "theme": "方块世界初体验",
+      "title": "方块小达人挑战",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-08-block"
+      ],
+      "practical": "找一块真实积木，给妈妈看，说 I have a block.，再在下面写一次 block。",
+      "writeWord": "block",
+      "questions": [
+        {
+          "kind": "picture",
+          "prompt": "听一听，找到方块。",
+          "speak": "block",
+          "options": [
+            "tree",
+            "block",
+            "house"
+          ],
+          "answer": "block"
+        },
+        {
+          "kind": "text",
+          "prompt": "想说“我有一个方块”，选哪一句？",
+          "speak": "I have a block.",
+          "options": [
+            "I have a block.",
+            "This is a block.",
+            "This is a tree."
+          ],
+          "answer": "I have a block."
+        },
+        {
+          "kind": "text",
+          "prompt": "想说“这是一个方块”，选哪一句？",
+          "speak": "This is a block.",
+          "options": [
+            "This is a tree.",
+            "This is a block.",
+            "I have a block."
+          ],
+          "answer": "This is a block."
+        },
+        {
+          "kind": "text",
+          "prompt": "哪个单词写对了？",
+          "speak": "block",
+          "options": [
+            "blcok",
+            "block",
+            "blok"
+          ],
+          "answer": "block"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-12-tree",
+      "date": "2026-10-12",
+      "type": "word",
+      "theme": "搭建我的小花园",
+      "title": "让小岛长出一棵树",
+      "word": "tree",
+      "meaning": "树",
+      "ipa": "/triː/",
+      "phonics": "ee 在 tree 里一起发长长的 /iː/。",
+      "context": "游戏小岛上的树，公园里的树，都可以叫 tree。",
+      "phrases": [
+        {
+          "text": "This is a tree.",
+          "translation": "这是一棵树。",
+          "action": "指一指树"
+        },
+        {
+          "text": "I see a tree.",
+          "translation": "我看见一棵树。",
+          "action": "看一看窗外"
+        }
+      ],
+      "realTask": "去窗边或者看一张照片，找到一棵树，说 I see a tree.。",
+      "art": "tree",
+      "choices": [
+        "tree",
+        "house",
+        "block"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-08-block"
+      ]
+    },
+    {
+      "id": "2026-10-13-house",
+      "date": "2026-10-13",
+      "type": "word",
+      "theme": "搭建我的小花园",
+      "title": "给小岛搭一间房子",
+      "word": "house",
+      "meaning": "房子",
+      "ipa": "/haʊs/",
+      "phonics": "ou 在 house 里一起发 /aʊ/，像张大嘴说“啊乌”，最后轻轻发 /s/。",
+      "context": "游戏里搭的小房子，街道旁的房子，都可以叫 house。",
+      "phrases": [
+        {
+          "text": "This is a house.",
+          "translation": "这是一间房子。",
+          "action": "指一指房子"
+        },
+        {
+          "text": "I see a house.",
+          "translation": "我看见一间房子。",
+          "action": "看看窗外的房子"
+        }
+      ],
+      "realTask": "画一个有屋顶的小房子，指着画说 This is a house.。",
+      "art": "house",
+      "choices": [
+        "house",
+        "tree",
+        "water"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-12-tree"
+      ]
+    },
+    {
+      "id": "2026-10-14-water",
+      "date": "2026-10-14",
+      "type": "word",
+      "theme": "搭建我的小花园",
+      "title": "给小花园一点水",
+      "word": "water",
+      "meaning": "水",
+      "ipa": "/ˈwɔːtər/",
+      "phonics": "water 有两个音节，前面读重一点；不同英语口音的读法会稍有不同。",
+      "context": "游戏里的河水，杯子里的水，都可以叫 water。",
+      "phrases": [
+        {
+          "text": "I need water.",
+          "translation": "我需要水。",
+          "action": "想一想口渴的时候"
+        },
+        {
+          "text": "Here is some water.",
+          "translation": "这里有一些水。",
+          "action": "指一指杯子里的水"
+        }
+      ],
+      "realTask": "拿出一杯水，试着说 Here is some water.。",
+      "art": "water",
+      "choices": [
+        "water",
+        "seed",
+        "house"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-12-tree",
+        "2026-10-13-house"
+      ]
+    },
+    {
+      "id": "2026-10-15-seed",
+      "date": "2026-10-15",
+      "type": "word",
+      "theme": "搭建我的小花园",
+      "title": "种下你的英语小种子",
+      "word": "seed",
+      "meaning": "种子",
+      "ipa": "/siːd/",
+      "phonics": "ee 在 seed 里也发 /iː/。和 tree 的 ee 一样，最后轻轻发 /d/。",
+      "context": "游戏里播种的小种子，水果里的籽，都可以叫 seed。",
+      "phrases": [
+        {
+          "text": "This is a seed.",
+          "translation": "这是一颗种子。",
+          "action": "指一指种子"
+        },
+        {
+          "text": "I have a seed.",
+          "translation": "我有一颗种子。",
+          "action": "假装手里拿着种子"
+        }
+      ],
+      "realTask": "找一颗种子或水果籽，给妈妈看，说 I have a seed.。",
+      "art": "seed",
+      "choices": [
+        "seed",
+        "block",
+        "tree"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-14-water",
+        "2026-10-12-tree"
+      ]
+    },
+    {
+      "id": "2026-10-16-review",
+      "date": "2026-10-16",
+      "type": "review",
+      "theme": "搭建我的小花园",
+      "title": "我的花园英语挑战",
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-12-tree",
+        "2026-10-13-house",
+        "2026-10-14-water",
+        "2026-10-15-seed"
+      ],
+      "writeWord": "tree",
+      "practical": "画一个小花园，里面有树和房子。给妈妈介绍 This is a tree. 和 This is a house.，再写一次 tree。",
+      "questions": [
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到树。",
+          "speak": "tree",
+          "options": [
+            "water",
+            "tree",
+            "seed"
+          ],
+          "answer": "tree"
+        },
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到房子。",
+          "speak": "house",
+          "options": [
+            "house",
+            "block",
+            "tree"
+          ],
+          "answer": "house"
+        },
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到水。",
+          "speak": "water",
+          "options": [
+            "seed",
+            "house",
+            "water"
+          ],
+          "answer": "water"
+        },
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到种子。",
+          "speak": "seed",
+          "options": [
+            "tree",
+            "seed",
+            "block"
+          ],
+          "answer": "seed"
+        },
+        {
+          "kind": "text",
+          "prompt": "口渴了，想说“我需要水”，选哪一句？",
+          "speak": "I need water.",
+          "options": [
+            "I see a tree.",
+            "I need water.",
+            "I have a seed."
+          ],
+          "answer": "I need water."
+        },
+        {
+          "kind": "text",
+          "prompt": "哪个单词是“树”？",
+          "speak": "tree",
+          "options": [
+            "tre",
+            "tree",
+            "tere"
+          ],
+          "answer": "tree"
+        }
+      ]
+    }
+  ]
+}
