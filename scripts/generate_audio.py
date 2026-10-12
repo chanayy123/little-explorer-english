@@ -5,6 +5,7 @@ import argparse
 import asyncio
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -90,9 +91,22 @@ async def generate():
         url = path.relative_to(ROOT / "dist").as_posix()
         target = catalog["chinese"] if profile == "xiaoxiao" else catalog["english"][profile]
         target[text] = url
+    catalog_source = "window.LESSON_AUDIO = " + json.dumps(catalog, ensure_ascii=False) + ";\n"
     temp_catalog = CATALOG.with_suffix(".tmp")
-    temp_catalog.write_text("window.LESSON_AUDIO = " + json.dumps(catalog, ensure_ascii=False) + ";\n", encoding="utf-8")
+    temp_catalog.write_text(catalog_source, encoding="utf-8")
     temp_catalog.replace(CATALOG)
+    revision = hashlib.sha256(catalog_source.encode()).hexdigest()[:12]
+    for name in ("index.html", "lesson.html"):
+        page = ROOT / "dist" / name
+        source = page.read_text(encoding="utf-8")
+        updated = re.sub(
+            r'assets/audio-catalog\.js\?v=[^"]+',
+            f"assets/audio-catalog.js?v={revision}",
+            source,
+        )
+        if updated == source:
+            raise RuntimeError(f"Missing audio catalog script in {name}")
+        page.write_text(updated, encoding="utf-8")
     print(f"Ready: {len(jobs())} MP3 recordings; fixed English and Chinese voices.")
 
 
