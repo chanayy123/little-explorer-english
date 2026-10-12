@@ -299,6 +299,246 @@
           "answer": "tree"
         }
       ]
+    },
+    {
+      "id": "2026-10-19-book",
+      "date": "2026-10-19",
+      "type": "word",
+      "theme": "我的校园活力小队",
+      "title": "打开一本英语小书",
+      "word": "book",
+      "meaning": "书",
+      "ipa": "/bʊk/",
+      "phonics": "book 中的 oo 发短短的 /ʊ/，嘴巴轻轻收圆。",
+      "context": "课桌上的书、睡前读的故事书，都可以叫 book。",
+      "phrases": [
+        {
+          "text": "This is my book.",
+          "translation": "这是我的书。",
+          "action": "拿起自己的一本书"
+        },
+        {
+          "text": "I read a book.",
+          "translation": "我读一本书。",
+          "action": "做出翻书阅读的动作"
+        }
+      ],
+      "realTask": "找一本喜欢的书，给妈妈看，说 This is my book.，再翻开读一小页。",
+      "art": "book",
+      "choices": [
+        "book",
+        "bag",
+        "tree"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-13-house",
+        "2026-10-15-seed"
+      ]
+    },
+    {
+      "id": "2026-10-20-pencil",
+      "date": "2026-10-20",
+      "type": "word",
+      "theme": "我的校园活力小队",
+      "title": "拿起铅笔画一画",
+      "word": "pencil",
+      "meaning": "铅笔",
+      "ipa": "/ˈpensəl/",
+      "phonics": "pencil 有两个音节，先读 PEN；字母 c 在 i 前面读 /s/。",
+      "context": "写作业的铅笔、画画用的铅笔，都可以叫 pencil。",
+      "phrases": [
+        {
+          "text": "This is my pencil.",
+          "translation": "这是我的铅笔。",
+          "action": "拿起自己的铅笔"
+        },
+        {
+          "text": "I write with a pencil.",
+          "translation": "我用铅笔写字。",
+          "action": "做出写字的动作"
+        }
+      ],
+      "realTask": "拿一支铅笔写下自己的英文名字，然后对妈妈说 I write with a pencil.。",
+      "art": "pencil",
+      "choices": [
+        "pencil",
+        "book",
+        "seed"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-19-book",
+        "2026-10-12-tree"
+      ]
+    },
+    {
+      "id": "2026-10-21-bag",
+      "date": "2026-10-21",
+      "type": "word",
+      "theme": "我的校园活力小队",
+      "title": "收好我的小书包",
+      "word": "bag",
+      "meaning": "包；书包",
+      "ipa": "/bæɡ/",
+      "phonics": "bag 中的 a 发 /æ/，嘴巴张开一点；最后的 g 要轻轻收住。",
+      "context": "上学背的书包、装东西的小包，都可以叫 bag。",
+      "phrases": [
+        {
+          "text": "This is my bag.",
+          "translation": "这是我的包。",
+          "action": "指一指自己的书包"
+        },
+        {
+          "text": "My book is in the bag.",
+          "translation": "我的书在包里。",
+          "action": "把书放进书包"
+        }
+      ],
+      "realTask": "把一本书放进书包，边做边说 My book is in the bag.。",
+      "art": "bag",
+      "choices": [
+        "bag",
+        "house",
+        "pencil"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-19-book",
+        "2026-10-20-pencil"
+      ]
+    },
+    {
+      "id": "2026-10-22-ball",
+      "date": "2026-10-22",
+      "type": "word",
+      "theme": "我的校园活力小队",
+      "title": "带着小球动起来",
+      "word": "ball",
+      "meaning": "球",
+      "ipa": "/bɔːl/",
+      "phonics": "ball 中的 all 连在一起读 /ɔːl/；不同英语口音会稍有不同。",
+      "context": "足球、篮球和手里玩的圆球，都可以用 ball 来表示。",
+      "phrases": [
+        {
+          "text": "This is a ball.",
+          "translation": "这是一个球。",
+          "action": "双手比出一个圆形"
+        },
+        {
+          "text": "I can kick the ball.",
+          "translation": "我会踢球。",
+          "action": "轻轻做一个踢球动作"
+        }
+      ],
+      "realTask": "找一个安全的小球，轻轻踢一下，说 I can kick the ball.；没有球就用纸团代替。",
+      "art": "ball",
+      "choices": [
+        "ball",
+        "water",
+        "bag"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-21-bag",
+        "2026-10-08-block"
+      ]
+    },
+    {
+      "id": "2026-10-23-review",
+      "date": "2026-10-23",
+      "type": "review",
+      "theme": "我的校园活力小队",
+      "title": "书包与运动英语挑战",
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-19-book",
+        "2026-10-20-pencil",
+        "2026-10-21-bag",
+        "2026-10-22-ball"
+      ],
+      "writeWord": "book",
+      "practical": "把书和铅笔放进书包，向妈妈介绍 This is my book. 和 This is my pencil.；再轻轻滚球或踢球，说 I can kick the ball.，最后写一次 book。",
+      "questions": [
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到书。",
+          "speak": "book",
+          "options": [
+            "bag",
+            "book",
+            "tree"
+          ],
+          "answer": "book"
+        },
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到铅笔。",
+          "speak": "pencil",
+          "options": [
+            "seed",
+            "pencil",
+            "ball"
+          ],
+          "answer": "pencil"
+        },
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到书包。",
+          "speak": "bag",
+          "options": [
+            "house",
+            "book",
+            "bag"
+          ],
+          "answer": "bag"
+        },
+        {
+          "kind": "picture",
+          "prompt": "听声音，找到球。",
+          "speak": "ball",
+          "options": [
+            "ball",
+            "water",
+            "block"
+          ],
+          "answer": "ball"
+        },
+        {
+          "kind": "text",
+          "prompt": "想说“我的书在包里”，选哪一句？",
+          "speak": "My book is in the bag.",
+          "options": [
+            "This is my pencil.",
+            "My book is in the bag.",
+            "I read a book."
+          ],
+          "answer": "My book is in the bag."
+        },
+        {
+          "kind": "text",
+          "prompt": "想说“我会踢球”，选哪一句？",
+          "speak": "I can kick the ball.",
+          "options": [
+            "This is a ball.",
+            "I write with a pencil.",
+            "I can kick the ball."
+          ],
+          "answer": "I can kick the ball."
+        },
+        {
+          "kind": "text",
+          "prompt": "哪个单词写对了？",
+          "speak": "book",
+          "options": [
+            "boko",
+            "bok",
+            "book"
+          ],
+          "answer": "book"
+        }
+      ]
     }
   ]
 }
+
