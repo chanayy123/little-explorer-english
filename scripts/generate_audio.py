@@ -46,6 +46,16 @@ def jobs():
 
 async def generate():
     import edge_tts
+    from edge_tts import communicate as edge_communicate
+    from edge_tts.constants import TRUSTED_CLIENT_TOKEN
+
+    # edge-tts 7.2.8 still targets Microsoft's retired legacy synthesis host,
+    # which began returning 403 globally in October 2026. This is the focused
+    # endpoint change from upstream PR #491; remove it after a fixed release.
+    edge_communicate.WSS_URL = (
+        "wss://api.msedgeservices.com/tts/cognitiveservices/websocket/v1"
+        f"?Ocp-Apim-Subscription-Key={TRUSTED_CLIENT_TOKEN}"
+    )
 
     gate = asyncio.Semaphore(2)
 
@@ -97,3 +107,4 @@ if __name__ == "__main__":
         print(json.dumps({"recordings": len(jobs()), "voices": {k: v[0] for k, v in PROFILES.items()}}, ensure_ascii=False))
     else:
         asyncio.run(generate())
+
