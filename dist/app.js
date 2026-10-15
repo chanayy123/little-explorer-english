@@ -15,7 +15,7 @@
     try {
       const raw = JSON.parse(localStorage.getItem(STORE));
       if (!raw || !['home','lesson','complete'].includes(raw.screen) || !Number.isInteger(raw.stage) || raw.stage < 0 || raw.stage > 5) return fresh();
-      const s = {...fresh(),...raw};
+      const s = {...fresh(),...raw,...(window.LessonBook?.preferences()||{})};
       s.completed = Array.isArray(s.completed) ? [...new Set(s.completed.filter(n=>Number.isInteger(n)&&n>=0&&n<6))].sort((a,b)=>a-b) : [];
       s.material = ['grass','stone','wood'].includes(s.material) ? s.material : 'grass';
       s.listenRound = Math.max(0, Math.min(3, Number(s.listenRound)||0));
@@ -33,7 +33,7 @@
   let toastTimer;
   let spellingHint = false;
   const voicePlayer = window.createLessonVoice({ settings: () => state, save, toast });
-  function save() { try {localStorage.setItem(STORE,JSON.stringify(state));} catch {} window.LessonBook?.savePreferences(state); }
+  function save() { const book=window.LessonBook;if(book){book.progressSaveFailed=!book.write(STORE,state);book.savePreferences(state);book.renderGrowth(window.COURSE_LIBRARY);}else{try{localStorage.setItem(STORE,JSON.stringify(state));}catch{toast('本课进度暂未保存，请检查浏览器存储。');}} }
   function toast(message) {
     const el = document.getElementById('toast');
     el.textContent = message;

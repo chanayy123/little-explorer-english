@@ -22,7 +22,7 @@ CHINESE = [
 ]
 # The course data is the shared source for all future audio generations.
 LIBRARY = json.loads((ROOT / "dist/assets/lessons.json").read_text(encoding="utf-8"))
-CHINESE += ["和妈妈一起说这句话", "和妈妈做完小任务，再写一次单词。", "探险完成，今天学得很认真！"]
+CHINESE += ["和妈妈一起说这句话", "和妈妈做完小任务，再写一次单词。", "探险完成，今天学得很认真！", "先听完整指令，再选图片。"]
 for course in LIBRARY["lessons"]:
     if course["type"] == "word":
         word = course["word"]
@@ -32,6 +32,10 @@ for course in LIBRARY["lessons"]:
     elif course["type"] == "review":
         ENGLISH += [question["speak"] for question in course["questions"]]
         CHINESE += [question["prompt"] for question in course["questions"]]
+    elif course["type"] == "delivery":
+        for mission in course["missions"]:
+            ENGLISH += [mission["word"], mission["instruction"]]
+            CHINESE.append(mission["help"])
 ENGLISH = list(dict.fromkeys(ENGLISH))
 CHINESE = list(dict.fromkeys(CHINESE))
 PROFILES = {"jenny": ("en-US-JennyNeural", ENGLISH), "aria": ("en-US-AriaNeural", ENGLISH), "xiaoxiao": ("zh-CN-XiaoxiaoNeural", CHINESE)}
@@ -49,6 +53,11 @@ async def generate():
     import edge_tts
     from edge_tts import communicate as edge_communicate
     from edge_tts.constants import TRUSTED_CLIENT_TOKEN
+
+    # edge-tts starts with certifi only. Also honor the platform's configured
+    # trust store (including SSL_CERT_FILE) without disabling TLS verification.
+    # _SSL_CTX is internal: requirements-audio.txt pins the version tested here.
+    edge_communicate._SSL_CTX.load_default_certs()
 
     # edge-tts 7.2.8 still targets Microsoft's retired legacy synthesis host,
     # which began returning 403 globally in October 2026. This is the focused
@@ -99,14 +108,15 @@ async def generate():
     for name in ("index.html", "lesson.html"):
         page = ROOT / "dist" / name
         source = page.read_text(encoding="utf-8")
-        updated = re.sub(
+        updated, replacements = re.subn(
             r'assets/audio-catalog\.js\?v=[^"]+',
             f"assets/audio-catalog.js?v={revision}",
             source,
         )
-        if updated == source:
+        if not replacements:
             raise RuntimeError(f"Missing audio catalog script in {name}")
-        page.write_text(updated, encoding="utf-8")
+        if updated != source:
+            page.write_text(updated, encoding="utf-8")
     print(f"Ready: {len(jobs())} MP3 recordings; fixed English and Chinese voices.")
 
 

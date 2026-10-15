@@ -7,12 +7,13 @@
   <meta name="description" content="和妈妈一起开启方块探险：用六个小关卡学会 block，听一听、说一说、拼一拼、写一写。">
   <title>方块探险 · 英语第1课</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <link rel="stylesheet" href="book.css?v=3">
-  <script src="assets/audio-catalog.js?v=3" defer></script>
-  <script src="voice-player.js?v=3" defer></script>
-  <script src="book-core.js?v=3" defer></script>
-  <script src="course-runtime.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="book.css?v=4">
+  <script src="assets/audio-catalog.js?v=2c5058df2b5b" defer></script>
+  <script src="voice-player.js?v=4" defer></script>
+  <script src="book-core.js?v=4" defer></script>
+  <script src="growth.js?v=1" defer></script>
+  <script src="course-runtime.js?v=4" defer></script>
 </head>
 <body>
   <div class="site-shell">
@@ -28,6 +29,7 @@
         <button class="icon-button" data-action="parent" aria-label="打开陪学指南"><span aria-hidden="true">☷</span><span>陪学指南</span></button>
       </div>
     </header>
+    <section id="growth-panel" class="growth-panel" aria-label="本地冒险成长"></section>
     <main id="app" tabindex="-1"><p class="loading-note">正在打开今天的小探险…</p></main>
     <footer class="site-footer"><span>一个单词，一场小冒险。</span><span>兴趣英语 · 亲子共学</span></footer>
   </div>
@@ -58,7 +60,7 @@
     <button class="button primary full" data-action="close-voices">就用这个声音</button>
   </dialog>
   <dialog id="restart-dialog" aria-labelledby="restart-title">
-    <h2 id="restart-title">重新开始这场探险？</h2><p>本次的星星和闯关进度会清空。</p>
+    <h2 id="restart-title">重新开始这场探险？</h2><p>本课练习进度会重新开始。已经获得的成长经验不会清零，也不会重复奖励。</p>
     <div class="button-row"><button class="button secondary" data-action="cancel-restart">继续学习</button><button class="button primary" data-action="restart">重新开始</button></div>
   </dialog>
   <noscript><p class="noscript">请在浏览器中启用 JavaScript，以使用语音和互动小游戏。</p></noscript>

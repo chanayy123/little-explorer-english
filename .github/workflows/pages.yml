@@ -29,13 +29,19 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate course library
-        run: python scripts/validate_lessons.py
+        run: |
+          python scripts/validate_lessons.py
+          python tests/validate-lessons.test.py
       - name: Test interactive course flows
         run: |
           npm install --no-save --package-lock=false jsdom@26.1.0
           python scripts/generate_audio.py --list-texts > .audio-plan.json
           node tests/book-core.test.js
           node tests/course-flow.test.js
+          node tests/delivery-flow.test.js
+          node tests/voice-player.test.js
+          node tests/growth.test.js
+          node tests/growth-integration.test.js
       - name: Restore existing recordings
         uses: actions/cache@v5
         with:
@@ -52,9 +58,11 @@ jobs:
           node --check dist/voice-player.js
           node --check dist/assets/audio-catalog.js
           node --check dist/book-core.js
+          node --check dist/growth.js
           node --check dist/book.js
           node --check dist/course-runtime.js
           node --check dist/course-engine.js
+          node --check dist/delivery-engine.js
           node tests/book-core.test.js
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -19,56 +19,76 @@
       if(player){player.onended=null;player.onerror=null;player.onplaying=null;player.pause();try{player.currentTime=0;}catch{}}
       document.body.classList.remove('speaking');
     }
-    function nativeSay(items,slow,id) {
+    function nativeSay(items,slow,id,complete) {
       if(!synth||!('SpeechSynthesisUtterance' in window)){toast('这台设备暂时不能朗读，可以请妈妈示范。');return;}
-      voices=synth.getVoices();let started=false;
-      utterances=items.map(part=>{
+      voices=synth.getVoices();let started=false,failed=false;
+      // The last utterance alone cannot prove earlier parts played successfully.
+      const ended=new Set();
+      const fail=error=>{
+        if(id!==serial||failed)return;failed=true;
+        clearTimeout(watchdog);document.body.classList.remove('speaking');utterances=[];
+        synth.cancel();
+        if(!['interrupted','canceled'].includes(error)&&!warned){warned=true;toast('请再点一次喇叭，或换一个声音试听。');}
+      };
+      utterances=items.map((part,index)=>{
         const u=new SpeechSynthesisUtterance(part.text);
         u.lang=part.lang;const voice=chooseVoice(part.lang);if(voice)u.voice=voice;
         u.rate=(part.lang.startsWith('en')?(slow?.76:.96):(slow?.85:1))*rate();
         u.pitch=1;
-        u.onstart=()=>{if(id!==serial)return;started=true;document.body.classList.add('speaking');document.getElementById('speech-status').textContent='正在朗读：'+part.text;};
-        u.onerror=e=>{if(id!==serial||['interrupted','canceled'].includes(e.error))return;document.body.classList.remove('speaking');if(!warned){warned=true;toast('请再点一次喇叭，或换一个声音试听。');}};
+        u.onstart=()=>{if(id!==serial||failed)return;started=true;document.body.classList.add('speaking');document.getElementById('speech-status').textContent='正在朗读：'+part.text;};
+        u.onerror=e=>fail(e.error);
+        u.onend=()=>{
+          if(id!==serial||failed||ended.has(index))return;
+          ended.add(index);
+          if(ended.size!==items.length)return;
+          clearTimeout(watchdog);document.body.classList.remove('speaking');utterances=[];complete();
+        };
         return u;
       });
-      const last=utterances[utterances.length-1];
-      if(last)last.onend=()=>{if(id!==serial)return;clearTimeout(watchdog);document.body.classList.remove('speaking');utterances=[];};
-      synth.resume();for(const u of utterances)synth.speak(u);
-      watchdog=setTimeout(()=>{if(id===serial&&!started){toast('没听到声音？检查音量后，再点一次喇叭。');document.body.classList.remove('speaking');}},5000);
+      try{synth.resume();for(const u of utterances){if(failed)break;synth.speak(u);}}
+      catch{fail('synthesis-failed');}
+      if(!failed&&ended.size!==items.length)watchdog=setTimeout(()=>{if(id===serial&&!started){toast('没听到声音？检查音量后，再点一次喇叭。');document.body.classList.remove('speaking');}},5000);
     }
     function recordingFor(part) {
       if(!usesRecordings())return null;
       if(part.lang.startsWith('en'))return catalog.english?.[settings().recordingVoice==='aria'?'aria':'jenny']?.[part.text] || null;
       return catalog.chinese?.[part.text] || null;
     }
-    function recordedSay(items,files,slow,id) {
+    function recordedSay(items,files,slow,id,complete) {
       if(!player)player=new Audio();let index=0,failed=false;
       const fallback=()=>{
         if(id!==serial||failed)return;failed=true;
         player.onended=null;player.onerror=null;player.onplaying=null;player.pause();
+        document.body.classList.remove('speaking');
         if(!warned){warned=true;toast('录音暂未播放，先使用设备声音。');}
-        nativeSay(items,slow,id);
+        nativeSay(items,slow,id,complete);
       };
       const next=()=>{
-        if(id!==serial)return;
-        if(index>=files.length){document.body.classList.remove('speaking');player.onended=null;return;}
+        if(id!==serial||failed)return;
+        if(index>=files.length){document.body.classList.remove('speaking');player.onended=null;player.onerror=null;player.onplaying=null;complete();return;}
         const part=items[index],file=files[index++];
+        // Ignore duplicate events and late play-promise failures from old parts.
+        let settled=false;
+        const onFailure=()=>{if(settled)return;settled=true;fallback();};
         player.src=new URL(file,document.baseURI).href;
         player.playbackRate=(slow?.78:1)*rate();
         player.preservesPitch=true;player.webkitPreservesPitch=true;
-        player.onplaying=()=>{if(id!==serial)return;document.body.classList.add('speaking');document.getElementById('speech-status').textContent='正在朗读：'+part.text;};
-        player.onended=next;player.onerror=fallback;
-        const promise=player.play();if(promise?.catch)promise.catch(fallback);
+        player.onplaying=()=>{if(id!==serial||failed||settled)return;document.body.classList.add('speaking');document.getElementById('speech-status').textContent='正在朗读：'+part.text;};
+        player.onended=()=>{if(settled)return;settled=true;next();};player.onerror=onFailure;
+        try{const promise=player.play();if(promise?.catch)promise.catch(onFailure);}
+        catch{onFailure();}
       };
       next();
     }
-    function say(parts,slow=false,force=false) {
+    function say(parts,slow=false,force=false,onComplete) {
       stop();if(!settings().sound&&!force)return;
       const id=serial;
+      let completed=false;
+      const complete=()=>{if(id!==serial||completed)return;completed=true;if(typeof onComplete==='function')onComplete();};
       const items=(Array.isArray(parts)?parts:[parts]).map(p=>typeof p==='string'?{text:p,lang:'en-US'}:p).filter(p=>p&&typeof p.text==='string'&&typeof p.lang==='string');
       if(!items.length)return;
       const files=items.map(recordingFor);
-      if(files.every(Boolean)&&'Audio' in window)recordedSay(items,files,slow,id);else nativeSay(items,slow,id);
+      if(files.every(Boolean)&&'Audio' in window)recordedSay(items,files,slow,id,complete);else nativeSay(items,slow,id,complete);
     }
     function populateSelect(id,language,key) {
       const select=document.getElementById(id);if(!select)return;

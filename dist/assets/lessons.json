@@ -217,6 +217,42 @@
       ]
     },
     {
+      "id": "2026-10-16-flower",
+      "date": "2026-10-16",
+      "type": "word",
+      "theme": "搭建我的小花园",
+      "title": "让小花园开出一朵花",
+      "word": "flower",
+      "meaning": "花；花朵",
+      "ipa": "/ˈflaʊər/",
+      "phonics": "flower 里的 ow 发 /aʊ/，像 house 里的 ou；最后轻轻读 /ər/。",
+      "context": "花园里的花、花瓶里的花，都可以叫 flower。",
+      "phrases": [
+        {
+          "text": "This is a flower.",
+          "translation": "这是一朵花。",
+          "action": "指一指花朵"
+        },
+        {
+          "text": "I see a flower.",
+          "translation": "我看见一朵花。",
+          "action": "看看窗外或照片里的花"
+        }
+      ],
+      "realTask": "在照片里或窗边找一朵花，指给妈妈看，说 I see a flower.。",
+      "art": "flower",
+      "choices": [
+        "flower",
+        "tree",
+        "seed"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-15-seed",
+        "2026-10-14-water"
+      ]
+    },
+    {
       "id": "2026-10-16-review",
       "date": "2026-10-16",
       "type": "review",
@@ -297,6 +333,171 @@
             "tere"
           ],
           "answer": "tree"
+        }
+      ],
+      "supplemental": true
+    },
+    {
+      "id": "2026-10-17-delivery",
+      "date": "2026-10-17",
+      "type": "delivery",
+      "theme": "搭建我的小花园",
+      "title": "小岛花园派送队",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-12-tree",
+        "2026-10-13-house",
+        "2026-10-14-water",
+        "2026-10-15-seed",
+        "2026-10-16-flower"
+      ],
+      "missions": [
+        {
+          "word": "tree",
+          "options": [
+            "house",
+            "tree",
+            "seed"
+          ],
+          "target": "林间空地",
+          "before": "这块空地还没有树荫。",
+          "after": "树站好了，空地有了凉凉的树荫。",
+          "instruction": "Find the tree.",
+          "help": "找到树，把它送到林间空地。"
+        },
+        {
+          "word": "house",
+          "options": [
+            "house",
+            "flower",
+            "water"
+          ],
+          "target": "小岛门口",
+          "before": "小岛门口还缺一间小屋。",
+          "after": "房子到了，小岛有了温暖的小屋。",
+          "instruction": "Find the house.",
+          "help": "找到房子，把它送到小岛门口。"
+        },
+        {
+          "word": "water",
+          "options": [
+            "tree",
+            "seed",
+            "water"
+          ],
+          "target": "小水池",
+          "before": "小水池空空的，正等着装水。",
+          "after": "清水到了，小水池亮晶晶的。",
+          "instruction": "Find the water.",
+          "help": "找到水，把它送到小水池。"
+        },
+        {
+          "word": "seed",
+          "options": [
+            "flower",
+            "seed",
+            "house"
+          ],
+          "target": "种植区",
+          "before": "土壤已经松好，还没有种子。",
+          "after": "种子种下了，种植区有了新希望。",
+          "instruction": "Find the seed.",
+          "help": "找到种子，把它送到种植区。"
+        },
+        {
+          "word": "flower",
+          "options": [
+            "flower",
+            "water",
+            "tree"
+          ],
+          "target": "花坛",
+          "before": "花坛里少了一朵漂亮的花。",
+          "after": "花朵到了，花坛变得五彩缤纷。",
+          "instruction": "Find the flower.",
+          "help": "找到花，把它送到花坛。"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-18-delivery",
+      "date": "2026-10-18",
+      "type": "delivery",
+      "theme": "搭建我的小花园",
+      "title": "花园野餐小帮手",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-12-tree",
+        "2026-10-13-house",
+        "2026-10-14-water",
+        "2026-10-15-seed",
+        "2026-10-16-flower"
+      ],
+      "missions": [
+        {
+          "word": "tree",
+          "options": [
+            "house",
+            "tree",
+            "seed"
+          ],
+          "target": "野餐草地",
+          "before": "野餐草地上还缺一个乘凉的地方。",
+          "after": "树送到了，大家可以在树荫下野餐。",
+          "instruction": "Find the tree.",
+          "help": "找到树，把它送到野餐草地。"
+        },
+        {
+          "word": "house",
+          "options": [
+            "house",
+            "flower",
+            "water"
+          ],
+          "target": "休息区",
+          "before": "休息区还没有可以避雨的小屋。",
+          "after": "房子搭好了，休息区有了避雨的地方。",
+          "instruction": "Find the house.",
+          "help": "找到房子，把它送到休息区。"
+        },
+        {
+          "word": "water",
+          "options": [
+            "tree",
+            "seed",
+            "water"
+          ],
+          "target": "饮水桌",
+          "before": "饮水桌空着，大家还没有水喝。",
+          "after": "水送到了，饮水桌准备好了。",
+          "instruction": "Find the water.",
+          "help": "找到水，把它送到饮水桌。"
+        },
+        {
+          "word": "seed",
+          "options": [
+            "flower",
+            "seed",
+            "house"
+          ],
+          "target": "小花盆",
+          "before": "小花盆装好了土，还没有播种。",
+          "after": "种子住进花盆，等待长出小芽。",
+          "instruction": "Find the seed.",
+          "help": "找到种子，把它送到小花盆。"
+        },
+        {
+          "word": "flower",
+          "options": [
+            "flower",
+            "water",
+            "tree"
+          ],
+          "target": "迎宾花篮",
+          "before": "迎宾花篮空空的，还没有装饰。",
+          "after": "花朵放进篮子，花园派对准备好了。",
+          "instruction": "Find the flower.",
+          "help": "找到花，把它送到迎宾花篮。"
         }
       ]
     },
@@ -445,6 +646,42 @@
       ]
     },
     {
+      "id": "2026-10-23-box",
+      "date": "2026-10-23",
+      "type": "word",
+      "theme": "我的校园活力小队",
+      "title": "把宝贝收进小盒子",
+      "word": "box",
+      "meaning": "盒子；箱子",
+      "ipa": "/bɑːks/",
+      "phonics": "box 最后的 x 发 /ks/，把 /k/ 和 /s/ 轻轻连起来。",
+      "context": "装铅笔的小盒子、收玩具的纸箱，都可以叫 box。",
+      "phrases": [
+        {
+          "text": "This is a box.",
+          "translation": "这是一个盒子。",
+          "action": "指一指盒子"
+        },
+        {
+          "text": "I have a box.",
+          "translation": "我有一个盒子。",
+          "action": "双手拿起小盒子"
+        }
+      ],
+      "realTask": "找一个空盒子，放进一支铅笔，再向妈妈介绍 This is a box.。",
+      "art": "box",
+      "choices": [
+        "bag",
+        "box",
+        "book"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-20-pencil",
+        "2026-10-21-bag"
+      ]
+    },
+    {
       "id": "2026-10-23-review",
       "date": "2026-10-23",
       "type": "review",
@@ -537,8 +774,172 @@
           ],
           "answer": "book"
         }
+      ],
+      "supplemental": true
+    },
+    {
+      "id": "2026-10-24-delivery",
+      "date": "2026-10-24",
+      "type": "delivery",
+      "theme": "我的校园活力小队",
+      "title": "校园准备派送队",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-19-book",
+        "2026-10-20-pencil",
+        "2026-10-21-bag",
+        "2026-10-22-ball",
+        "2026-10-23-box"
+      ],
+      "missions": [
+        {
+          "word": "book",
+          "options": [
+            "pencil",
+            "book",
+            "ball"
+          ],
+          "target": "阅读角",
+          "before": "阅读角的书架上还空着一个位置。",
+          "after": "书送到了，阅读角可以开始读故事了。",
+          "instruction": "Find the book.",
+          "help": "找到书，把它送到阅读角。"
+        },
+        {
+          "word": "pencil",
+          "options": [
+            "pencil",
+            "box",
+            "bag"
+          ],
+          "target": "绘画桌",
+          "before": "绘画桌上放好了纸，还缺画画的工具。",
+          "after": "铅笔送到了，可以开始画画了。",
+          "instruction": "Find the pencil.",
+          "help": "找到铅笔，把它送到绘画桌。"
+        },
+        {
+          "word": "bag",
+          "options": [
+            "book",
+            "ball",
+            "bag"
+          ],
+          "target": "门边挂钩",
+          "before": "门边的挂钩空着，书包还没放好。",
+          "after": "书包挂好了，教室门口整整齐齐。",
+          "instruction": "Find the bag.",
+          "help": "找到书包，把它送到门边挂钩。"
+        },
+        {
+          "word": "ball",
+          "options": [
+            "box",
+            "ball",
+            "pencil"
+          ],
+          "target": "运动场",
+          "before": "运动场准备好了，还没有球。",
+          "after": "球送到了，运动小队可以开场了。",
+          "instruction": "Find the ball.",
+          "help": "找到球，把它送到运动场。"
+        },
+        {
+          "word": "box",
+          "options": [
+            "box",
+            "bag",
+            "book"
+          ],
+          "target": "收纳架",
+          "before": "收纳架上还缺一个装物品的盒子。",
+          "after": "盒子放好了，小物品有了收纳的地方。",
+          "instruction": "Find the box.",
+          "help": "找到盒子，把它送到收纳架。"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-delivery",
+      "date": "2026-10-25",
+      "type": "delivery",
+      "theme": "我的校园活力小队",
+      "title": "运动会补给小队",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-19-book",
+        "2026-10-20-pencil",
+        "2026-10-21-bag",
+        "2026-10-22-ball",
+        "2026-10-23-box"
+      ],
+      "missions": [
+        {
+          "word": "book",
+          "options": [
+            "pencil",
+            "book",
+            "ball"
+          ],
+          "target": "故事帐篷",
+          "before": "故事帐篷搭好了，还没有故事书。",
+          "after": "书送到了，休息时可以读故事了。",
+          "instruction": "Find the book.",
+          "help": "找到书，把它送到故事帐篷。"
+        },
+        {
+          "word": "pencil",
+          "options": [
+            "pencil",
+            "box",
+            "bag"
+          ],
+          "target": "记分台",
+          "before": "记分台有纸，却还不能写下分数。",
+          "after": "铅笔送到了，可以记录比赛分数了。",
+          "instruction": "Find the pencil.",
+          "help": "找到铅笔，把它送到记分台。"
+        },
+        {
+          "word": "bag",
+          "options": [
+            "book",
+            "ball",
+            "bag"
+          ],
+          "target": "集合点",
+          "before": "集合点还缺一个装随身物品的包。",
+          "after": "包送到了，随身物品可以一起带走了。",
+          "instruction": "Find the bag.",
+          "help": "找到包，把它送到集合点。"
+        },
+        {
+          "word": "ball",
+          "options": [
+            "box",
+            "ball",
+            "pencil"
+          ],
+          "target": "球门前",
+          "before": "球门已经摆好，还没法开始踢球。",
+          "after": "球送到了，大家可以开始踢球了。",
+          "instruction": "Find the ball.",
+          "help": "找到球，把它送到球门前。"
+        },
+        {
+          "word": "box",
+          "options": [
+            "box",
+            "bag",
+            "book"
+          ],
+          "target": "装备区",
+          "before": "装备区的小物品还没有地方收好。",
+          "after": "盒子送到了，装备区变得整齐了。",
+          "instruction": "Find the box.",
+          "help": "找到盒子，把它送到装备区。"
+        }
       ]
     }
   ]
 }
-
