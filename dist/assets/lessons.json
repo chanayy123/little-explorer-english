@@ -940,6 +940,364 @@
           "help": "找到盒子，把它送到装备区。"
         }
       ]
+    },
+    {
+      "id": "2026-10-26-door",
+      "date": "2026-10-26",
+      "type": "word",
+      "theme": "我的温暖小家",
+      "title": "打开家的小门",
+      "word": "door",
+      "meaning": "门",
+      "ipa": "/dɔːr/",
+      "phonics": "door 里的 oo 和 r 连起来读；不同英语口音的读法会稍有不同。",
+      "context": "家门、教室门和游戏小屋的门，都可以叫 door。",
+      "phrases": [
+        {
+          "text": "This is the door.",
+          "translation": "这是这扇门。",
+          "action": "指一指身边的门"
+        },
+        {
+          "text": "Please open the door.",
+          "translation": "请打开门。",
+          "action": "做出轻轻开门的动作"
+        }
+      ],
+      "realTask": "走到家里的一扇门旁，指着它说 This is the door.，再轻轻做一次开门动作。",
+      "art": "door",
+      "choices": [
+        "door",
+        "chair",
+        "house"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-13-house",
+        "2026-10-23-box"
+      ]
+    },
+    {
+      "id": "2026-10-27-table",
+      "date": "2026-10-27",
+      "type": "word",
+      "theme": "我的温暖小家",
+      "title": "把书放到桌上",
+      "word": "table",
+      "meaning": "桌子",
+      "ipa": "/ˈteɪbəl/",
+      "phonics": "table 有两个音节，先读重一点的 tay，再轻轻读 bəl。",
+      "context": "吃饭的桌子、写作业的桌子，都可以叫 table。",
+      "phrases": [
+        {
+          "text": "This is a table.",
+          "translation": "这是一张桌子。",
+          "action": "轻轻拍一拍桌面"
+        },
+        {
+          "text": "My book is on the table.",
+          "translation": "我的书在桌子上。",
+          "action": "把一本书放到桌上"
+        }
+      ],
+      "realTask": "把一本书放到桌上，边做边说 My book is on the table.。",
+      "art": "table",
+      "choices": [
+        "table",
+        "door",
+        "book"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-26-door",
+        "2026-10-19-book"
+      ]
+    },
+    {
+      "id": "2026-10-28-chair",
+      "date": "2026-10-28",
+      "type": "word",
+      "theme": "我的温暖小家",
+      "title": "坐上我的小椅子",
+      "word": "chair",
+      "meaning": "椅子",
+      "ipa": "/tʃer/",
+      "phonics": "chair 开头的 ch 发 /tʃ/，air 连起来读；不同英语口音会稍有不同。",
+      "context": "餐桌旁的椅子、书桌前的椅子，都可以叫 chair。",
+      "phrases": [
+        {
+          "text": "This is a chair.",
+          "translation": "这是一把椅子。",
+          "action": "指一指椅子"
+        },
+        {
+          "text": "I sit on the chair.",
+          "translation": "我坐在椅子上。",
+          "action": "安全地坐到椅子上"
+        }
+      ],
+      "realTask": "指着一把椅子说 This is a chair.，再坐下说 I sit on the chair.。",
+      "art": "chair",
+      "choices": [
+        "chair",
+        "table",
+        "bag"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-27-table",
+        "2026-10-21-bag"
+      ]
+    },
+    {
+      "id": "2026-10-29-apple",
+      "date": "2026-10-29",
+      "type": "word",
+      "theme": "我的温暖小家",
+      "title": "找到一颗红苹果",
+      "word": "apple",
+      "meaning": "苹果",
+      "ipa": "/ˈæpəl/",
+      "phonics": "apple 有两个音节，开头的 a 发 /æ/，后面的 ple 轻轻读。",
+      "context": "水果盘里的苹果、点心盒里的苹果，都可以叫 apple。",
+      "phrases": [
+        {
+          "text": "This is an apple.",
+          "translation": "这是一个苹果。",
+          "action": "指一指苹果"
+        },
+        {
+          "text": "I eat an apple.",
+          "translation": "我吃一个苹果。",
+          "action": "做出咬苹果的动作"
+        }
+      ],
+      "realTask": "找一个苹果或苹果图片，指着它说 This is an apple.。",
+      "art": "apple",
+      "choices": [
+        "apple",
+        "ball",
+        "flower"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-28-chair",
+        "2026-10-22-ball"
+      ]
+    },
+    {
+      "id": "2026-10-30-milk",
+      "date": "2026-10-30",
+      "type": "word",
+      "theme": "我的温暖小家",
+      "title": "给早餐添一杯牛奶",
+      "word": "milk",
+      "meaning": "牛奶",
+      "ipa": "/mɪlk/",
+      "phonics": "milk 里的 i 发短短的 /ɪ/，最后把 l 和 k 轻轻收住。",
+      "context": "早餐杯里的牛奶、冰箱里的牛奶，都可以叫 milk。",
+      "phrases": [
+        {
+          "text": "I like milk.",
+          "translation": "我喜欢牛奶。",
+          "action": "开心地点点头"
+        },
+        {
+          "text": "Here is some milk.",
+          "translation": "这里有一些牛奶。",
+          "action": "指一指装牛奶的杯子"
+        }
+      ],
+      "realTask": "找一杯牛奶或牛奶盒，指着它说 Here is some milk.；没有实物可以看图片。",
+      "art": "milk",
+      "choices": [
+        "milk",
+        "apple",
+        "water"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-29-apple",
+        "2026-10-14-water"
+      ]
+    },
+    {
+      "id": "2026-10-31-delivery",
+      "date": "2026-10-31",
+      "type": "delivery",
+      "theme": "我的温暖小家",
+      "title": "温暖小家整理队",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-26-door",
+        "2026-10-27-table",
+        "2026-10-28-chair",
+        "2026-10-29-apple",
+        "2026-10-30-milk"
+      ],
+      "growthStageIds": [
+        "door-delivery",
+        "table-delivery",
+        "chair-delivery",
+        "apple-delivery",
+        "milk-delivery"
+      ],
+      "missions": [
+        {
+          "word": "door",
+          "options": [
+            "chair",
+            "door",
+            "apple"
+          ],
+          "target": "小屋入口",
+          "before": "小屋入口还是空的，风会吹进来。",
+          "after": "门装好了，小屋变得暖和又安全。",
+          "instruction": "Find the door.",
+          "help": "找到门，把它送到小屋入口。"
+        },
+        {
+          "word": "table",
+          "options": [
+            "milk",
+            "table",
+            "door"
+          ],
+          "target": "用餐区",
+          "before": "用餐区还没有摆放食物的地方。",
+          "after": "桌子摆好了，可以准备一顿点心了。",
+          "instruction": "Find the table.",
+          "help": "找到桌子，把它送到用餐区。"
+        },
+        {
+          "word": "chair",
+          "options": [
+            "apple",
+            "chair",
+            "table"
+          ],
+          "target": "阅读角",
+          "before": "阅读角有一本书，却没有地方坐。",
+          "after": "椅子摆好了，可以舒服地坐着看书。",
+          "instruction": "Find the chair.",
+          "help": "找到椅子，把它送到阅读角。"
+        },
+        {
+          "word": "apple",
+          "options": [
+            "door",
+            "milk",
+            "apple"
+          ],
+          "target": "水果盘",
+          "before": "水果盘洗干净了，里面还空空的。",
+          "after": "苹果放进盘里，点心准备好了。",
+          "instruction": "Find the apple.",
+          "help": "找到苹果，把它送到水果盘。"
+        },
+        {
+          "word": "milk",
+          "options": [
+            "table",
+            "apple",
+            "milk"
+          ],
+          "target": "早餐桌",
+          "before": "早餐桌上有杯子，还没有饮品。",
+          "after": "牛奶送到了，早餐变得更丰富了。",
+          "instruction": "Find the milk.",
+          "help": "找到牛奶，把它送到早餐桌。"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-01-delivery",
+      "date": "2026-11-01",
+      "type": "delivery",
+      "theme": "我的温暖小家",
+      "title": "周末家庭野餐队",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-10-26-door",
+        "2026-10-27-table",
+        "2026-10-28-chair",
+        "2026-10-29-apple",
+        "2026-10-30-milk"
+      ],
+      "growthStageIds": [
+        "door-delivery",
+        "table-delivery",
+        "chair-delivery",
+        "apple-delivery",
+        "milk-delivery"
+      ],
+      "missions": [
+        {
+          "word": "door",
+          "options": [
+            "chair",
+            "door",
+            "apple"
+          ],
+          "target": "花园小棚",
+          "before": "花园小棚没有挡风的入口。",
+          "after": "门装到了小棚上，里面不再进风。",
+          "instruction": "Find the door.",
+          "help": "找到门，把它送到花园小棚。"
+        },
+        {
+          "word": "table",
+          "options": [
+            "milk",
+            "table",
+            "door"
+          ],
+          "target": "野餐垫旁",
+          "before": "野餐食物还没有一个平稳的位置。",
+          "after": "桌子送到了，食物可以整齐摆好了。",
+          "instruction": "Find the table.",
+          "help": "找到桌子，把它送到野餐垫旁。"
+        },
+        {
+          "word": "chair",
+          "options": [
+            "apple",
+            "chair",
+            "table"
+          ],
+          "target": "树荫下面",
+          "before": "树荫下面很凉快，却没有休息的位置。",
+          "after": "椅子摆好了，可以坐下来休息了。",
+          "instruction": "Find the chair.",
+          "help": "找到椅子，把它送到树荫下面。"
+        },
+        {
+          "word": "apple",
+          "options": [
+            "door",
+            "milk",
+            "apple"
+          ],
+          "target": "野餐篮",
+          "before": "野餐篮里还缺一种香甜的水果。",
+          "after": "苹果放进篮里，可以带去分享了。",
+          "instruction": "Find the apple.",
+          "help": "找到苹果，把它送到野餐篮。"
+        },
+        {
+          "word": "milk",
+          "options": [
+            "table",
+            "apple",
+            "milk"
+          ],
+          "target": "饮品箱",
+          "before": "饮品箱已经放好，里面还没有牛奶。",
+          "after": "牛奶放进饮品箱，野餐饮品准备好了。",
+          "instruction": "Find the milk.",
+          "help": "找到牛奶，把它送到饮品箱。"
+        }
+      ]
     }
   ]
 }
