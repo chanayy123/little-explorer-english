@@ -1298,6 +1298,364 @@
           "help": "找到牛奶，把它送到饮品箱。"
         }
       ]
+    },
+    {
+      "id": "2026-11-02-cat",
+      "date": "2026-11-02",
+      "type": "word",
+      "theme": "动物朋友小队",
+      "title": "认识软软的小猫",
+      "word": "cat",
+      "meaning": "猫",
+      "ipa": "/kæt/",
+      "phonics": "cat 里的 c 发 /k/，a 发短短的 /æ/，最后轻轻收住 t。",
+      "context": "家里的小猫、故事里的小猫，都可以叫 cat。",
+      "phrases": [
+        {
+          "text": "This is a cat.",
+          "translation": "这是一只猫。",
+          "action": "指一指小猫或小猫图片"
+        },
+        {
+          "text": "The cat is soft.",
+          "translation": "这只猫软软的。",
+          "action": "做出轻轻抚摸的动作"
+        }
+      ],
+      "realTask": "找一只玩具猫或小猫图片，指着它说 This is a cat.。",
+      "art": "cat",
+      "choices": [
+        "cat",
+        "dog",
+        "rabbit"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-10-29-apple",
+        "2026-10-28-chair"
+      ]
+    },
+    {
+      "id": "2026-11-03-dog",
+      "date": "2026-11-03",
+      "type": "word",
+      "theme": "动物朋友小队",
+      "title": "和小狗一起跑一跑",
+      "word": "dog",
+      "meaning": "狗",
+      "ipa": "/dɔːɡ/",
+      "phonics": "dog 开头的 d 要轻轻碰一下，o 的读法会随英语口音稍有不同，最后读 g。",
+      "context": "家里的小狗、公园里的小狗，都可以叫 dog。",
+      "phrases": [
+        {
+          "text": "This is a dog.",
+          "translation": "这是一只狗。",
+          "action": "指一指小狗或小狗图片"
+        },
+        {
+          "text": "The dog can run.",
+          "translation": "这只狗会跑。",
+          "action": "用手指做跑步动作"
+        }
+      ],
+      "realTask": "找一只玩具狗或小狗图片，说 This is a dog.，再做一个跑步动作。",
+      "art": "dog",
+      "choices": [
+        "dog",
+        "cat",
+        "ball"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-02-cat",
+        "2026-10-22-ball"
+      ]
+    },
+    {
+      "id": "2026-11-04-bird",
+      "date": "2026-11-04",
+      "type": "word",
+      "theme": "动物朋友小队",
+      "title": "看小鸟飞过天空",
+      "word": "bird",
+      "meaning": "鸟",
+      "ipa": "/bɜːrd/",
+      "phonics": "bird 里的 ir 和 r 连起来读；不同英语口音的读法会稍有不同。",
+      "context": "树上的小鸟、天空中飞过的鸟，都可以叫 bird。",
+      "phrases": [
+        {
+          "text": "This is a bird.",
+          "translation": "这是一只鸟。",
+          "action": "指一指小鸟或小鸟图片"
+        },
+        {
+          "text": "The bird can fly.",
+          "translation": "这只鸟会飞。",
+          "action": "张开双臂做飞翔动作"
+        }
+      ],
+      "realTask": "看看窗外或找一张小鸟图片，张开双臂说 The bird can fly.。",
+      "art": "bird",
+      "choices": [
+        "bird",
+        "tree",
+        "cat"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-03-dog",
+        "2026-10-12-tree"
+      ]
+    },
+    {
+      "id": "2026-11-05-fish",
+      "date": "2026-11-05",
+      "type": "word",
+      "theme": "动物朋友小队",
+      "title": "陪小鱼游一游",
+      "word": "fish",
+      "meaning": "鱼",
+      "ipa": "/fɪʃ/",
+      "phonics": "fish 里的 i 发短短的 /ɪ/，sh 合在一起发 /ʃ/。",
+      "context": "鱼缸里的鱼、池塘里的鱼，都可以叫 fish。",
+      "phrases": [
+        {
+          "text": "This is a fish.",
+          "translation": "这是一条鱼。",
+          "action": "指一指小鱼或小鱼图片"
+        },
+        {
+          "text": "The fish can swim.",
+          "translation": "这条鱼会游泳。",
+          "action": "双手合拢做游泳动作"
+        }
+      ],
+      "realTask": "找一条玩具鱼或小鱼图片，双手做游泳动作，说 The fish can swim.。",
+      "art": "fish",
+      "choices": [
+        "fish",
+        "water",
+        "bird"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-04-bird",
+        "2026-10-14-water"
+      ]
+    },
+    {
+      "id": "2026-11-06-rabbit",
+      "date": "2026-11-06",
+      "type": "word",
+      "theme": "动物朋友小队",
+      "title": "跟小兔子跳一跳",
+      "word": "rabbit",
+      "meaning": "兔子",
+      "ipa": "/ˈræbɪt/",
+      "phonics": "rabbit 有两个音节，前面的 rab 读重一点，后面的 bit 轻轻读。",
+      "context": "草地上的兔子、故事里的小兔子，都可以叫 rabbit。",
+      "phrases": [
+        {
+          "text": "This is a rabbit.",
+          "translation": "这是一只兔子。",
+          "action": "用两根手指做长耳朵"
+        },
+        {
+          "text": "The rabbit can jump.",
+          "translation": "这只兔子会跳。",
+          "action": "手指在桌面上轻轻跳两下"
+        }
+      ],
+      "realTask": "用两根手指做兔子耳朵，再让手指跳两下，说 The rabbit can jump.。",
+      "art": "rabbit",
+      "choices": [
+        "rabbit",
+        "dog",
+        "fish"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-05-fish",
+        "2026-10-15-seed"
+      ]
+    },
+    {
+      "id": "2026-11-07-delivery",
+      "date": "2026-11-07",
+      "type": "delivery",
+      "theme": "动物朋友小队",
+      "title": "动物朋友照顾站",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-11-02-cat",
+        "2026-11-03-dog",
+        "2026-11-04-bird",
+        "2026-11-05-fish",
+        "2026-11-06-rabbit"
+      ],
+      "growthStageIds": [
+        "cat-delivery",
+        "dog-delivery",
+        "bird-delivery",
+        "fish-delivery",
+        "rabbit-delivery"
+      ],
+      "missions": [
+        {
+          "word": "cat",
+          "options": [
+            "dog",
+            "cat",
+            "rabbit"
+          ],
+          "target": "温暖软垫",
+          "before": "软垫已经铺好，还没有小动物来休息。",
+          "after": "小猫趴在软垫上，舒服地休息起来。",
+          "instruction": "Find the cat.",
+          "help": "找到小猫，把它送到温暖软垫。"
+        },
+        {
+          "word": "dog",
+          "options": [
+            "bird",
+            "dog",
+            "fish"
+          ],
+          "target": "运动草地",
+          "before": "草地空空的，还没有小动物来跑步。",
+          "after": "小狗跑进草地，开心地活动起来。",
+          "instruction": "Find the dog.",
+          "help": "找到小狗，把它送到运动草地。"
+        },
+        {
+          "word": "bird",
+          "options": [
+            "cat",
+            "fish",
+            "bird"
+          ],
+          "target": "树枝小站",
+          "before": "树枝轻轻摇晃，还没有小动物停下来。",
+          "after": "小鸟落在树枝上，树枝变得热闹了。",
+          "instruction": "Find the bird.",
+          "help": "找到小鸟，把它送到树枝小站。"
+        },
+        {
+          "word": "fish",
+          "options": [
+            "rabbit",
+            "fish",
+            "dog"
+          ],
+          "target": "清水池塘",
+          "before": "池塘里只有清水，还看不到小动物。",
+          "after": "小鱼游进池塘，水面泛起了小波纹。",
+          "instruction": "Find the fish.",
+          "help": "找到小鱼，把它送到清水池塘。"
+        },
+        {
+          "word": "rabbit",
+          "options": [
+            "bird",
+            "cat",
+            "rabbit"
+          ],
+          "target": "嫩草花园",
+          "before": "花园长满嫩草，还没有小动物来玩。",
+          "after": "小兔跳进花园，在嫩草旁开心玩耍。",
+          "instruction": "Find the rabbit.",
+          "help": "找到小兔，把它送到嫩草花园。"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08-delivery",
+      "date": "2026-11-08",
+      "type": "delivery",
+      "theme": "动物朋友小队",
+      "title": "动物朋友欢乐游园会",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-11-02-cat",
+        "2026-11-03-dog",
+        "2026-11-04-bird",
+        "2026-11-05-fish",
+        "2026-11-06-rabbit"
+      ],
+      "growthStageIds": [
+        "cat-delivery",
+        "dog-delivery",
+        "bird-delivery",
+        "fish-delivery",
+        "rabbit-delivery"
+      ],
+      "missions": [
+        {
+          "word": "cat",
+          "options": [
+            "fish",
+            "cat",
+            "bird"
+          ],
+          "target": "窗边坐垫",
+          "before": "窗边阳光暖暖的，坐垫上还是空的。",
+          "after": "小猫坐上窗边坐垫，安静地晒起太阳。",
+          "instruction": "Find the cat.",
+          "help": "找到小猫，把它送到窗边坐垫。"
+        },
+        {
+          "word": "dog",
+          "options": [
+            "rabbit",
+            "bird",
+            "dog"
+          ],
+          "target": "彩旗入口",
+          "before": "彩旗入口已经打开，还没有小动物来迎接大家。",
+          "after": "小狗来到彩旗入口，摇着尾巴欢迎朋友。",
+          "instruction": "Find the dog.",
+          "help": "找到小狗，把它送到彩旗入口。"
+        },
+        {
+          "word": "bird",
+          "options": [
+            "cat",
+            "bird",
+            "rabbit"
+          ],
+          "target": "高高树梢",
+          "before": "高高的树梢很安静，还没有传来歌声。",
+          "after": "小鸟飞上树梢，唱起了清亮的歌。",
+          "instruction": "Find the bird.",
+          "help": "找到小鸟，把它送到高高树梢。"
+        },
+        {
+          "word": "fish",
+          "options": [
+            "dog",
+            "fish",
+            "cat"
+          ],
+          "target": "透明鱼缸",
+          "before": "透明鱼缸装好了水，里面还没有小动物。",
+          "after": "小鱼游进鱼缸，摆动尾巴探索新家。",
+          "instruction": "Find the fish.",
+          "help": "找到小鱼，把它送到透明鱼缸。"
+        },
+        {
+          "word": "rabbit",
+          "options": [
+            "bird",
+            "dog",
+            "rabbit"
+          ],
+          "target": "胡萝卜园",
+          "before": "胡萝卜园准备好了，还没有小动物来参观。",
+          "after": "小兔跳进胡萝卜园，开心地闻了闻叶子。",
+          "instruction": "Find the rabbit.",
+          "help": "找到小兔，把它送到胡萝卜园。"
+        }
+      ]
     }
   ]
 }
