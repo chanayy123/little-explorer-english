@@ -18,7 +18,7 @@ function storage(seed={}){
   const api={memory,gets,writes,getItem(k){gets.push(k);return memory.get(k)??null;},setItem(k,v){writes.push(k);memory.set(k,String(v));},removeItem(k){memory.delete(k);}};
   return api;
 }
-function setup({store=storage(),day='2026-11-01',data=library,script=source('growth.js'),denied=false}={}){
+function setup({store=storage(),day=library.lessons.at(-1).date,data=library,script=source('growth.js'),denied=false}={}){
   const dom=new JSDOM('<!doctype html><body></body>',{url:'https://example.test/english/',runScripts:'outside-only'}),w=dom.window;
   Object.defineProperty(w,'localStorage',denied?{configurable:true,get(){throw new w.DOMException('denied','SecurityError');}}:{configurable:true,value:store});
   w.eval(source('book-core.js'));w.LessonBook.today=()=>day;w.eval(script);
@@ -52,7 +52,7 @@ test('migration preserves original raw course, handwriting, preference and unrel
   for(const [id,count] of [['2026-10-09-review',5],['2026-10-16-review',7],['2026-10-23-review',8]]){
     const ids=awardIds(store,find(id));assert.equal(ids.length,count);assert.equal(ids.includes('practical'),true);assert.equal(new Set(ids).size,count);
   }
-  assert.equal(g.themes.length,4);t.close();
+  assert.equal(g.themes.length,new Set(library.lessons.map(lesson=>lesson.theme)).size);t.close();
 });
 
 test('only legal completed indexes migrate; future, unknown and flag-only progress do not',()=>{
