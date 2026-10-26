@@ -146,21 +146,21 @@ test('unknown review/delivery schemas, duplicate lesson IDs and aliased course s
 });
 
 test('future delivery requires an explicit unique map, then freezes that adopted map in its own ledger',()=>{
-  const extra={...clone(find('2026-10-17-delivery')),id:'2026-11-07-delivery',date:'2026-11-07'};
+  const extra={...clone(find('2026-10-17-delivery')),id:'2099-11-07-delivery',date:'2099-11-07'};
   extra.growthStageIds=extra.missions.map(m=>m.word+'-delivery');
   const data={...clone(library),lessons:[...clone(library.lessons),extra]},store=storage();
-  completed(store,extra,[0,2]);let t=setup({store,data,day:'2026-11-07'});
+  completed(store,extra,[0,2]);let t=setup({store,data,day:'2099-11-07'});
   let g=t.run();assert.equal(g.saved,true);assert.equal(g.xp,20);assert.deepEqual(awardIds(store,extra),['tree-delivery','water-delivery']);
   assert.deepEqual(entries(store).indexes.find(item=>item.lessonId===extra.id),{lessonId:extra.id,stageIds:extra.growthStageIds});
   const raw=store.memory.get(STORE);t.close();
   // Reordering both missions and their declaration still must not reinterpret
   // the old numeric progress, even in a new browser instance.
   const changed=clone(data),course=changed.lessons.at(-1);course.missions.reverse();course.growthStageIds=course.missions.map(m=>m.word+'-delivery');
-  t=setup({store,data:changed,day:'2026-11-07'});g=t.run();assert.equal(g.saved,false);assert.equal(g.available,false);assert.ok(g.warning);assert.equal(store.memory.get(STORE),raw);t.close();
+  t=setup({store,data:changed,day:'2099-11-07'});g=t.run();assert.equal(g.saved,false);assert.equal(g.available,false);assert.ok(g.warning);assert.equal(store.memory.get(STORE),raw);t.close();
   const without=clone(data);delete without.lessons.at(-1).growthStageIds;const missing=storage();completed(missing,extra,[0]);
-  t=setup({store:missing,data:without,day:'2026-11-07'});g=t.run();assert.equal(g.stars,0);assert.equal(g.saved,false);assert.match(g.warning,/关卡对应关系/);t.close();
+  t=setup({store:missing,data:without,day:'2099-11-07'});g=t.run();assert.equal(g.stars,0);assert.equal(g.saved,false);assert.match(g.warning,/关卡对应关系/);t.close();
   const mismatched=clone(data);mismatched.lessons.at(-1).growthStageIds.reverse();const wrong=storage();completed(wrong,extra,[0]);
-  t=setup({store:wrong,data:mismatched,day:'2026-11-07'});g=t.run();assert.equal(g.stars,0);assert.equal(g.saved,false);t.close();
+  t=setup({store:wrong,data:mismatched,day:'2099-11-07'});g=t.run();assert.equal(g.stars,0);assert.equal(g.saved,false);t.close();
 });
 
 test('invalid legacy JSON and oversized progress stay untouched and cannot create awards',()=>{
