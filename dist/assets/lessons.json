@@ -1656,6 +1656,364 @@
           "help": "找到小兔，把它送到胡萝卜园。"
         }
       ]
+    },
+    {
+      "id": "2026-11-09-hand",
+      "date": "2026-11-09",
+      "type": "word",
+      "theme": "我的身体动作站",
+      "title": "伸出能干的小手",
+      "word": "hand",
+      "meaning": "手",
+      "ipa": "/hænd/",
+      "phonics": "hand 开头的 h 轻轻送气，a 发短短的 /æ/，最后把 n 和 d 连起来。",
+      "context": "画画、搭积木、拍手时，我们都会用到 hand。",
+      "phrases": [
+        {
+          "text": "This is my hand.",
+          "translation": "这是我的手。",
+          "action": "伸出一只手"
+        },
+        {
+          "text": "I clap my hands.",
+          "translation": "我拍手。",
+          "action": "轻轻拍两下手"
+        }
+      ],
+      "realTask": "伸出一只手说 This is my hand.，再轻轻拍两下手说 I clap my hands.。",
+      "art": "hand",
+      "choices": [
+        "hand",
+        "eye",
+        "ear"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-06-rabbit",
+        "2026-11-02-cat"
+      ]
+    },
+    {
+      "id": "2026-11-10-eye",
+      "date": "2026-11-10",
+      "type": "word",
+      "theme": "我的身体动作站",
+      "title": "用明亮的眼睛找一找",
+      "word": "eye",
+      "meaning": "眼睛",
+      "ipa": "/aɪ/",
+      "phonics": "eye 只有一个音节，整体读 /aɪ/，和字母 I 的读音一样。",
+      "context": "看书、看小动物、寻找游戏里的目标，都要用到 eye。",
+      "phrases": [
+        {
+          "text": "This is my eye.",
+          "translation": "这是我的眼睛。",
+          "action": "指一指眼睛旁边，不碰眼球"
+        },
+        {
+          "text": "I see with my eyes.",
+          "translation": "我用眼睛看。",
+          "action": "看看房间里的三样东西"
+        }
+      ],
+      "realTask": "安全地指一指眼睛旁边，说 This is my eye.，再看看房间里的三样东西。",
+      "art": "eye",
+      "choices": [
+        "eye",
+        "nose",
+        "hand"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-09-hand",
+        "2026-11-04-bird"
+      ]
+    },
+    {
+      "id": "2026-11-11-ear",
+      "date": "2026-11-11",
+      "type": "word",
+      "theme": "我的身体动作站",
+      "title": "用小耳朵听一听",
+      "word": "ear",
+      "meaning": "耳朵",
+      "ipa": "/ɪr/",
+      "phonics": "ear 连起来读；不同英语口音会读成 /ɪr/ 或接近 /ɪə/。",
+      "context": "听妈妈说话、听音乐、听小鸟叫，都要用到 ear。",
+      "phrases": [
+        {
+          "text": "This is my ear.",
+          "translation": "这是我的耳朵。",
+          "action": "指一指耳朵"
+        },
+        {
+          "text": "I hear with my ears.",
+          "translation": "我用耳朵听。",
+          "action": "安静听一听周围的声音"
+        }
+      ],
+      "realTask": "把手放在耳朵旁，安静听一个声音，再说 I hear with my ears.。",
+      "art": "ear",
+      "choices": [
+        "ear",
+        "mouth",
+        "eye"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-10-eye",
+        "2026-11-03-dog"
+      ]
+    },
+    {
+      "id": "2026-11-12-nose",
+      "date": "2026-11-12",
+      "type": "word",
+      "theme": "我的身体动作站",
+      "title": "用小鼻子闻一闻",
+      "word": "nose",
+      "meaning": "鼻子",
+      "ipa": "/noʊz/",
+      "phonics": "nose 里的 o 读长音 /oʊ/，末尾的 s 在这里读 /z/。",
+      "context": "闻水果、花朵或饭菜的香味时，我们会用到 nose。",
+      "phrases": [
+        {
+          "text": "This is my nose.",
+          "translation": "这是我的鼻子。",
+          "action": "轻轻指一指鼻子"
+        },
+        {
+          "text": "I smell with my nose.",
+          "translation": "我用鼻子闻。",
+          "action": "闻一闻水果或香皂"
+        }
+      ],
+      "realTask": "找一种安全熟悉的气味，轻轻闻一闻，说 I smell with my nose.。",
+      "art": "nose",
+      "choices": [
+        "nose",
+        "ear",
+        "mouth"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-11-ear",
+        "2026-10-16-flower"
+      ]
+    },
+    {
+      "id": "2026-11-13-mouth",
+      "date": "2026-11-13",
+      "type": "word",
+      "theme": "我的身体动作站",
+      "title": "张开嘴巴说一说",
+      "word": "mouth",
+      "meaning": "嘴巴",
+      "ipa": "/maʊθ/",
+      "phonics": "mouth 里的 ou 发 /aʊ/，结尾的 th 轻轻咬住舌尖送气。",
+      "context": "说英语、吃东西、露出笑容时，我们都会用到 mouth。",
+      "phrases": [
+        {
+          "text": "This is my mouth.",
+          "translation": "这是我的嘴巴。",
+          "action": "指一指嘴巴旁边"
+        },
+        {
+          "text": "I open my mouth.",
+          "translation": "我张开嘴巴。",
+          "action": "张开嘴巴再合上"
+        }
+      ],
+      "realTask": "指一指嘴巴旁边说 This is my mouth.，再张开嘴巴说 I open my mouth.。",
+      "art": "mouth",
+      "choices": [
+        "mouth",
+        "hand",
+        "nose"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-12-nose",
+        "2026-10-30-milk"
+      ]
+    },
+    {
+      "id": "2026-11-14-delivery",
+      "date": "2026-11-14",
+      "type": "delivery",
+      "theme": "我的身体动作站",
+      "title": "小探险家机器人修复站",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-11-09-hand",
+        "2026-11-10-eye",
+        "2026-11-11-ear",
+        "2026-11-12-nose",
+        "2026-11-13-mouth"
+      ],
+      "growthStageIds": [
+        "hand-delivery",
+        "eye-delivery",
+        "ear-delivery",
+        "nose-delivery",
+        "mouth-delivery"
+      ],
+      "missions": [
+        {
+          "word": "hand",
+          "options": [
+            "eye",
+            "hand",
+            "nose"
+          ],
+          "target": "操作手臂",
+          "before": "机器人的手臂还不能拿起积木。",
+          "after": "小手安装好了，机器人能拿起积木了。",
+          "instruction": "Find the hand.",
+          "help": "找到手，把它送到操作手臂。"
+        },
+        {
+          "word": "eye",
+          "options": [
+            "mouth",
+            "eye",
+            "ear"
+          ],
+          "target": "观察镜头",
+          "before": "观察镜头还黑黑的，看不见前方。",
+          "after": "眼睛安装好了，机器人看见了前方。",
+          "instruction": "Find the eye.",
+          "help": "找到眼睛，把它送到观察镜头。"
+        },
+        {
+          "word": "ear",
+          "options": [
+            "ear",
+            "nose",
+            "hand"
+          ],
+          "target": "声音接收器",
+          "before": "声音接收器静悄悄的，听不见提示。",
+          "after": "耳朵安装好了，机器人听见了提示。",
+          "instruction": "Find the ear.",
+          "help": "找到耳朵，把它送到声音接收器。"
+        },
+        {
+          "word": "nose",
+          "options": [
+            "eye",
+            "mouth",
+            "nose"
+          ],
+          "target": "气味传感器",
+          "before": "气味传感器还没有启动。",
+          "after": "鼻子安装好了，机器人闻到了花香。",
+          "instruction": "Find the nose.",
+          "help": "找到鼻子，把它送到气味传感器。"
+        },
+        {
+          "word": "mouth",
+          "options": [
+            "mouth",
+            "ear",
+            "hand"
+          ],
+          "target": "语音播报器",
+          "before": "语音播报器还不能说出欢迎语。",
+          "after": "嘴巴安装好了，机器人能开口说话了。",
+          "instruction": "Find the mouth.",
+          "help": "找到嘴巴，把它送到语音播报器。"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-15-delivery",
+      "date": "2026-11-15",
+      "type": "delivery",
+      "theme": "我的身体动作站",
+      "title": "机器人城市体验日",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-11-09-hand",
+        "2026-11-10-eye",
+        "2026-11-11-ear",
+        "2026-11-12-nose",
+        "2026-11-13-mouth"
+      ],
+      "growthStageIds": [
+        "hand-delivery",
+        "eye-delivery",
+        "ear-delivery",
+        "nose-delivery",
+        "mouth-delivery"
+      ],
+      "missions": [
+        {
+          "word": "hand",
+          "options": [
+            "mouth",
+            "nose",
+            "hand"
+          ],
+          "target": "积木搭建台",
+          "before": "搭建台上有积木，还没有机器人来动手。",
+          "after": "机器人伸出小手，搭好了一座小桥。",
+          "instruction": "Find the hand.",
+          "help": "找到手，把它送到积木搭建台。"
+        },
+        {
+          "word": "eye",
+          "options": [
+            "eye",
+            "hand",
+            "mouth"
+          ],
+          "target": "高高观察塔",
+          "before": "观察塔前一片安静，还没人发现远处的风筝。",
+          "after": "机器人用眼睛看见了远处的风筝。",
+          "instruction": "Find the eye.",
+          "help": "找到眼睛，把它送到高高观察塔。"
+        },
+        {
+          "word": "ear",
+          "options": [
+            "nose",
+            "ear",
+            "eye"
+          ],
+          "target": "音乐小广场",
+          "before": "广场响起音乐，机器人还听不见节拍。",
+          "after": "机器人用耳朵听见音乐，跟着节拍点头。",
+          "instruction": "Find the ear.",
+          "help": "找到耳朵，把它送到音乐小广场。"
+        },
+        {
+          "word": "nose",
+          "options": [
+            "hand",
+            "nose",
+            "ear"
+          ],
+          "target": "花香小花园",
+          "before": "花园里花朵盛开，机器人还没发现香味。",
+          "after": "机器人用鼻子闻到了淡淡的花香。",
+          "instruction": "Find the nose.",
+          "help": "找到鼻子，把它送到花香小花园。"
+        },
+        {
+          "word": "mouth",
+          "options": [
+            "eye",
+            "mouth",
+            "nose"
+          ],
+          "target": "故事小舞台",
+          "before": "小舞台准备好了，故事还没有开始。",
+          "after": "机器人用嘴巴讲起了有趣的小故事。",
+          "instruction": "Find the mouth.",
+          "help": "找到嘴巴，把它送到故事小舞台。"
+        }
+      ]
     }
   ]
 }
