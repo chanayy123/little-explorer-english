@@ -2014,6 +2014,365 @@
           "help": "找到嘴巴，把它送到故事小舞台。"
         }
       ]
+    },
+    {
+      "id": "2026-11-16-sun",
+      "date": "2026-11-16",
+      "type": "word",
+      "theme": "天气观察小队",
+      "title": "找到暖暖的太阳",
+      "word": "sun",
+      "meaning": "太阳",
+      "ipa": "/sʌn/",
+      "phonics": "sun 开头的 s 像轻轻吹气，u 发短短的 /ʌ/，最后读清 n。",
+      "context": "白天抬头看天空，常常能看到带来光和温暖的 sun。",
+      "phrases": [
+        {
+          "text": "This is the sun.",
+          "translation": "这是太阳。",
+          "action": "双手在头顶围成一个圆"
+        },
+        {
+          "text": "The sun is warm.",
+          "translation": "太阳暖暖的。",
+          "action": "双手轻轻抱住肩膀"
+        }
+      ],
+      "realTask": "看看窗外或找一张太阳图片，双手围成圆形，说 The sun is warm.。",
+      "art": "sun",
+      "choices": [
+        "sun",
+        "cloud",
+        "rain"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-13-mouth",
+        "2026-10-16-flower"
+      ]
+    },
+    {
+      "id": "2026-11-17-cloud",
+      "date": "2026-11-17",
+      "type": "word",
+      "theme": "天气观察小队",
+      "title": "看看软软的云朵",
+      "word": "cloud",
+      "meaning": "云",
+      "ipa": "/klaʊd/",
+      "phonics": "cloud 开头把 c 和 l 连起来读，ou 发 /aʊ/，最后读清 d。",
+      "context": "天空中像棉花一样飘动的白云，可以叫 cloud。",
+      "phrases": [
+        {
+          "text": "This is a cloud.",
+          "translation": "这是一朵云。",
+          "action": "用双手比出蓬松的云朵"
+        },
+        {
+          "text": "The cloud is white.",
+          "translation": "这朵云是白色的。",
+          "action": "指一指白色的东西"
+        }
+      ],
+      "realTask": "看看天空或找一张云朵图片，用双手比出云朵，说 This is a cloud.。",
+      "art": "cloud",
+      "choices": [
+        "cloud",
+        "sun",
+        "snow"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-16-sun",
+        "2026-11-04-bird"
+      ]
+    },
+    {
+      "id": "2026-11-18-rain",
+      "date": "2026-11-18",
+      "type": "word",
+      "theme": "天气观察小队",
+      "title": "听听小雨点",
+      "word": "rain",
+      "meaning": "雨",
+      "ipa": "/reɪn/",
+      "phonics": "rain 里的 ai 发 /eɪ/，和字母 A 的读音相近，最后读清 n。",
+      "context": "雨点从云里落下来时，我们会看到也会听到 rain。",
+      "phrases": [
+        {
+          "text": "I see rain.",
+          "translation": "我看见雨。",
+          "action": "手指从上往下点动"
+        },
+        {
+          "text": "The rain is falling.",
+          "translation": "雨正在落下。",
+          "action": "十根手指轻轻做下雨动作"
+        }
+      ],
+      "realTask": "用手指在桌面轻轻点出雨声，再说 The rain is falling.。",
+      "art": "rain",
+      "choices": [
+        "rain",
+        "cloud",
+        "wind"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-17-cloud",
+        "2026-10-14-water"
+      ]
+    },
+    {
+      "id": "2026-11-19-wind",
+      "date": "2026-11-19",
+      "type": "word",
+      "theme": "天气观察小队",
+      "title": "感受看不见的风",
+      "word": "wind",
+      "meaning": "风",
+      "ipa": "/wɪnd/",
+      "phonics": "wind 开头的 w 要把嘴唇收圆，i 发短短的 /ɪ/，最后连读 nd。",
+      "context": "树叶摇动、风车转起来时，我们可以感受到 wind。",
+      "phrases": [
+        {
+          "text": "I feel the wind.",
+          "translation": "我感受到风。",
+          "action": "用手轻轻扇一扇脸旁"
+        },
+        {
+          "text": "The wind is strong.",
+          "translation": "风很大。",
+          "action": "身体轻轻向一边倾斜"
+        }
+      ],
+      "realTask": "用一张纸轻轻扇出风，感受一下，再说 I feel the wind.。",
+      "art": "wind",
+      "choices": [
+        "wind",
+        "rain",
+        "cloud"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-18-rain",
+        "2026-11-12-nose"
+      ]
+    },
+    {
+      "id": "2026-11-20-snow",
+      "date": "2026-11-20",
+      "type": "word",
+      "theme": "天气观察小队",
+      "title": "接住一片小雪花",
+      "word": "snow",
+      "meaning": "雪",
+      "ipa": "/snoʊ/",
+      "phonics": "snow 开头把 s 和 n 连起来读，ow 在这里发长长的 /oʊ/。",
+      "context": "天气很冷时，从天空飘下来的白色雪花就是 snow。",
+      "phrases": [
+        {
+          "text": "This is snow.",
+          "translation": "这是雪。",
+          "action": "手指轻轻画一片雪花"
+        },
+        {
+          "text": "The snow is cold.",
+          "translation": "雪是冷的。",
+          "action": "双手抱住肩膀做冷的动作"
+        }
+      ],
+      "realTask": "用白纸画一片小雪花，指着它说 This is snow.。",
+      "art": "snow",
+      "choices": [
+        "snow",
+        "sun",
+        "rain"
+      ],
+      "minutes": "8～10",
+      "reviewOf": [
+        "2026-11-19-wind",
+        "2026-11-17-cloud"
+      ]
+    },
+    {
+      "id": "2026-11-21-delivery",
+      "date": "2026-11-21",
+      "type": "delivery",
+      "theme": "天气观察小队",
+      "title": "小小天气站修复行动",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-11-16-sun",
+        "2026-11-17-cloud",
+        "2026-11-18-rain",
+        "2026-11-19-wind",
+        "2026-11-20-snow"
+      ],
+      "growthStageIds": [
+        "sun-delivery",
+        "cloud-delivery",
+        "rain-delivery",
+        "wind-delivery",
+        "snow-delivery"
+      ],
+      "missions": [
+        {
+          "word": "sun",
+          "options": [
+            "cloud",
+            "sun",
+            "rain"
+          ],
+          "target": "太阳能板",
+          "before": "太阳能板还暗暗的，天气站没有电。",
+          "after": "太阳照亮了能量板，天气站重新启动。",
+          "instruction": "Find the sun.",
+          "help": "找到太阳，把它送到太阳能板。"
+        },
+        {
+          "word": "cloud",
+          "options": [
+            "wind",
+            "snow",
+            "cloud"
+          ],
+          "target": "观云窗口",
+          "before": "观云窗口空空的，还不能记录云朵。",
+          "after": "云朵飘到窗口前，天气站记下了它的样子。",
+          "instruction": "Find the cloud.",
+          "help": "找到云朵，把它送到观云窗口。"
+        },
+        {
+          "word": "rain",
+          "options": [
+            "rain",
+            "sun",
+            "cloud"
+          ],
+          "target": "雨量收集桶",
+          "before": "雨量桶还是空的，读数停在零。",
+          "after": "雨点落进桶里，刻度开始上升。",
+          "instruction": "Find the rain.",
+          "help": "找到雨，把它送到雨量收集桶。"
+        },
+        {
+          "word": "wind",
+          "options": [
+            "snow",
+            "wind",
+            "sun"
+          ],
+          "target": "风力小转轮",
+          "before": "风力转轮静静停着，还测不到风。",
+          "after": "风吹来以后，小转轮呼呼转了起来。",
+          "instruction": "Find the wind.",
+          "help": "找到风，把它送到风力小转轮。"
+        },
+        {
+          "word": "snow",
+          "options": [
+            "cloud",
+            "rain",
+            "snow"
+          ],
+          "target": "雪花观察台",
+          "before": "观察台准备好了，还没有雪花样本。",
+          "after": "雪花落到观察台上，亮出了漂亮的形状。",
+          "instruction": "Find the snow.",
+          "help": "找到雪，把它送到雪花观察台。"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-22-delivery",
+      "date": "2026-11-22",
+      "type": "delivery",
+      "theme": "天气观察小队",
+      "title": "天气小镇巡游日",
+      "minutes": "5～8",
+      "reviewOf": [
+        "2026-11-16-sun",
+        "2026-11-17-cloud",
+        "2026-11-18-rain",
+        "2026-11-19-wind",
+        "2026-11-20-snow"
+      ],
+      "growthStageIds": [
+        "sun-delivery",
+        "cloud-delivery",
+        "rain-delivery",
+        "wind-delivery",
+        "snow-delivery"
+      ],
+      "missions": [
+        {
+          "word": "sun",
+          "options": [
+            "snow",
+            "cloud",
+            "sun"
+          ],
+          "target": "向日葵花园",
+          "before": "向日葵还低着头，花园有点安静。",
+          "after": "太阳升起来，向日葵抬头迎接阳光。",
+          "instruction": "Find the sun.",
+          "help": "找到太阳，把它送到向日葵花园。"
+        },
+        {
+          "word": "cloud",
+          "options": [
+            "cloud",
+            "rain",
+            "wind"
+          ],
+          "target": "天空画廊",
+          "before": "蓝色画廊空空的，天空还少一幅画。",
+          "after": "白云飘进画廊，变成了一幅天空画。",
+          "instruction": "Find the cloud.",
+          "help": "找到云朵，把它送到天空画廊。"
+        },
+        {
+          "word": "rain",
+          "options": [
+            "sun",
+            "rain",
+            "snow"
+          ],
+          "target": "小苗菜园",
+          "before": "菜园里的小苗有点渴，叶子轻轻垂着。",
+          "after": "雨点浇过菜园，小苗精神地站了起来。",
+          "instruction": "Find the rain.",
+          "help": "找到雨，把它送到小苗菜园。"
+        },
+        {
+          "word": "wind",
+          "options": [
+            "wind",
+            "cloud",
+            "sun"
+          ],
+          "target": "彩色风车坡",
+          "before": "山坡上的彩色风车一动不动。",
+          "after": "风吹过山坡，彩色风车一起转起来。",
+          "instruction": "Find the wind.",
+          "help": "找到风，把它送到彩色风车坡。"
+        },
+        {
+          "word": "snow",
+          "options": [
+            "rain",
+            "snow",
+            "cloud"
+          ],
+          "target": "冬日小广场",
+          "before": "冬日广场干干净净，还没有雪景。",
+          "after": "雪花轻轻落下，广场铺上了白毯子。",
+          "instruction": "Find the snow.",
+          "help": "找到雪，把它送到冬日小广场。"
+        }
+      ]
     }
   ]
 }
+
